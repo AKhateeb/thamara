@@ -1,0 +1,65 @@
+{% extends 'datatable.html' %}
+
+{% block dt_title%}
+Services Table
+{% endblock %}
+
+{% block dt_table %}
+<thead>
+    <tr>
+        <th>Branch</th>
+        <th>Company</th>
+        <th>Status</th>
+        <th>Name</th>
+        <th>Beneficiaries</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class='text-arabic'>فرع عرمون</td>
+        <td class='text-arabic'>مركز أهيد الطبي</td>
+        <td><label for="" class='badge bg-warning'>Pending</label></td>
+        <td class='text-truncate text-arabic'> تبييض أسنان لكافة الأعمار</td>
+        <td>0</td>
+        <td>70,000 L.L</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+    <tr>
+        <td class='text-arabic'>فرع عرمون</td>
+        <td class='text-arabic'>مركز أهيد الطبي</td>
+        <td><label for="" class='badge bg-success'>Active</label></td>
+        <td class='text-truncate text-arabic'> قلع ضرس أو سحب عصب</td>
+        <td>10</td>
+        <td>80,000 L.L</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+    <tr>
+        <td class='text-arabic'>فرع عرمون</td>
+        <td class='text-arabic'>EVALAB</td>
+        <td><label for="" class='badge bg-success'>Active</label></td>
+        <td class='text-truncate text-arabic'> معرفة زمرة الدم</td>
+        <td>18</td>
+        <td>20,000 L.L</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+    <tr>
+        <td class='text-arabic'>فرع بيروت</td>
+        <td class='text-arabic'>مركز النور للمعالجة الفيزيائية</td>
+        <td><label for="" class='badge bg-success'>Active</label></td>
+        <td class='text-truncate text-arabic'> مساج مفاصل مع ملين عضلي</td>
+        <td>3</td>
+        <td>90,000 L.L</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+</tbody>
+{% endblock %}

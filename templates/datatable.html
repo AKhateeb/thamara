@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block extra_style %}
+<!-- Data Table Css -->
+<link rel="stylesheet" type="text/css"
+    href="files\bower_components\datatables.net-bs4\css\dataTables.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="files\assets\pages\data-table\css\buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css"
+    href="files\bower_components\datatables.net-responsive-bs4\css\responsive.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css"
+    href="files\assets\pages\data-table\extensions\buttons\css\buttons.dataTables.min.css">
+
+{% endblock extra_style %}
+
+{% block page_header %}
+{% endblock page_header %}
+
+{% block page_body %}
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-header table-card-header">
+            <h5>{% block dt_title%}{% endblock %}</h5>
+        </div>
+        <div class="card-block">
+            <div class="dt-responsive table-responsive">
+                <table id="dt-table" class="table table-striped table-bordered nowrap">
+                    {% block dt_table %}
+                    {% endblock %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock page_body %}
+
+{% block extra_js %}
+<!-- data-table js -->
+<script src="files\bower_components\datatables.net\js\jquery.dataTables.min.js"></script>
+<script src="files\bower_components\datatables.net-buttons\js\dataTables.buttons.min.js"></script>
+<script src="files\assets\pages\data-table\js\jszip.min.js"></script>
+<script src="files\assets\pages\data-table\js\pdfmake.min.js"></script>
+<script src="files\assets\pages\data-table\js\vfs_fonts.js"></script>
+<script src="files\assets\pages\data-table\extensions\buttons\js\dataTables.buttons.min.js"></script>
+<script src="files\assets\pages\data-table\extensions\buttons\js\buttons.flash.min.js"></script>
+<script src="files\assets\pages\data-table\extensions\buttons\js\jszip.min.js"></script>
+<script src="files\assets\pages\data-table\extensions\buttons\js\vfs_fonts.js"></script>
+<script src="files\assets\pages\data-table\extensions\buttons\js\buttons.colVis.min.js"></script>
+<script src="files\bower_components\datatables.net-buttons\js\buttons.print.min.js"></script>
+<script src="files\bower_components\datatables.net-buttons\js\buttons.html5.min.js"></script>
+<script src="files\bower_components\datatables.net-bs4\js\dataTables.bootstrap4.min.js"></script>
+<script src="files\bower_components\datatables.net-responsive\js\dataTables.responsive.min.js"></script>
+<script src="files\bower_components\datatables.net-responsive-bs4\js\responsive.bootstrap4.min.js"></script>
+<script src="files\assets\pages\data-table\extensions\buttons\js\extension-btns-custom.js"></script>
+
+<script>
+        $(document).ready(function () {
+        $('#dt-table').DataTable({
+            dom: 'Bfrtip',
+            buttons: ['copy', 'csv', 'excel', 'pdf', 'print']
+        });
+    });
+</script>
+
+{% endblock %}

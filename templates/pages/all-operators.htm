@@ -1,0 +1,54 @@
+{% extends 'datatable.html' %}
+
+{% block dt_title%}
+Operators Table
+{% endblock %}
+
+{% block dt_table %}
+<thead>
+    <tr>
+        <th>Branch</th>
+        <th>Name</th>
+        <th>Company</th>
+        <th>Role</th>
+        <th>Last Seen</th>
+        <th>Phone</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class='text-arabic'>فرع عرمون</td>
+        <td class='text-arabic'>سماح الحكيم</td>
+        <td class='text-arabic'>مركز الحسن</td>
+        <td class='text-arabic'>معاون مدير</td>
+        <td data-natural-date>2020/06/11</td>
+        <td>70889966</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+    <tr>
+        <td class='text-arabic'>فرع بيروت</td>
+        <td class='text-arabic'>حسان عيتاني</td>
+        <td class='text-arabic'>مركز حمزة</td>
+        <td class='text-arabic'>مسؤول تقني وفني</td>
+        <td data-natural-date>2020/06/01</td>
+        <td>71223344</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+    <tr>
+        <td class='text-arabic'>فرع عرمون</td>
+        <td class='text-arabic'>فاديا عبد العال</td>
+        <td class='text-arabic'>مركز أهيد الطبي</td>
+        <td class='text-arabic'>سكرتارية واستقبال</td>
+        <td data-natural-date>2020/06/08</td>
+        <td>71121314</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+</tbody>
+{% endblock %}

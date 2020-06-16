@@ -1,0 +1,755 @@
+{% extends 'base.html' %}
+
+{% block extra_style %}
+<link rel="stylesheet" type="text/css" href="..\files\assets\pages\list-scroll\list.css">
+{% endblock %}
+
+{% block page_header %}
+<h1 class='text-arabic text-center'>ثمرة - فرع بيروت</h1>
+{% endblock page_header %}
+
+{% block page_body %}
+<div class="row container-fluid">
+    <!-- widget-statstic start -->
+    <div class="col-md-12 col-xl-4">
+        <div class="card widget-statstic-card">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <h5>Total Revenues</h5>
+                    <p class="p-t-10 m-b-0 text-c-yellow">Compared to last month</p>
+                </div>
+            </div>
+            <div class="card-block">
+                <i class="feather icon-sliders st-icon bg-c-yellow"></i>
+                <div class="text-left">
+                    <h3 class="d-inline-block">5,450,000 L.L</h3>
+                    <i class="feather icon-arrow-up f-30 text-c-green"></i>
+                    <span class="f-right bg-c-yellow">23%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-4">
+        <div class="card widget-statstic-card">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <h5>Unique Visitors</h5>
+                    <p class="p-t-10 m-b-0 text-c-pink">55% From last 28 hours</p>
+                </div>
+            </div>
+            <div class="card-block">
+                <i class="feather icon-users st-icon bg-c-pink txt-lite-color"></i>
+                <div class="text-left">
+                    <h3 class="d-inline-block">74</h3>
+                    <i class="feather icon-arrow-down text-c-pink f-30 "></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-xl-4">
+        <div class="card widget-statstic-card">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <h5>New Services</h5>
+                    <p class="p-t-10 m-b-0 text-c-blue">54% From last month</p>
+                </div>
+            </div>
+            <div class="card-block">
+                <i class="feather icon-shopping-cart st-icon bg-c-blue"></i>
+                <div class="text-left">
+                    <h3 class="d-inline-block">96</h3>
+                    <i class="feather icon-arrow-up text-c-green f-30 "></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- widget-statstic end -->
+</div>
+<div class="row container-fluid">
+    <div class="col-xl-4 col-md-4">
+        <div class="card latest-update-card">
+            <div class="card-header">
+                <h5>Recent New Cards</h5>
+                <div class="card-header-right">
+                    <ul class="list-unstyled card-option">
+                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                        <li><i class="fa fa-minus minimize-card"></i></li>
+                        <li><i class="fa fa-refresh reload-card"></i></li>
+                        <li><i class="fa fa-trash close-card"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-block">
+                <div class="latest-update-box">
+                    <div class="row p-t-20 p-b-30">
+                        <div class="col-auto text-right update-meta">
+                            <p class="text-muted m-b-0 d-inline">2 hrs ago</p>
+                            <i class="feather icon-credit-card bg-success update-icon"></i>
+                        </div>
+                        <div class="col">
+                            <h5 class="text-muted">14-225-1615</h5>
+                            <p class="text-arabic m-b-0">نور خطيب</p>
+                        </div>
+                    </div>
+                    <div class="row p-t-20 p-b-30">
+                        <div class="col-auto text-right update-meta">
+                            <p class="text-muted m-b-0 d-inline">6 hrs ago</p>
+                            <i class="feather icon-credit-card bg-success update-icon"></i>
+                        </div>
+                        <div class="col">
+                            <h5 class="text-muted">12-152-1665</h5>
+                            <p class="text-arabic m-b-0">مصطفى شاتيلا</p>
+                        </div>
+                    </div>
+                    <div class="row p-t-20 p-b-30">
+                        <div class="col-auto text-right update-meta">
+                            <p class="text-muted m-b-0 d-inline">2 days ago</p>
+                            <i class="feather icon-credit-card bg-success update-icon"></i>
+                        </div>
+                        <div class="col">
+                            <h5 class="text-muted">16-115-2233</h5>
+                            <p class="text-arabic m-b-0">مراد أبو خشبة</p>
+                        </div>
+                    </div>
+                    <div class="row p-t-20 p-b-30">
+                        <div class="col-auto text-right update-meta">
+                            <p class="text-muted m-b-0 d-inline">6 hrs ago</p>
+                            <i class="feather icon-credit-card bg-success update-icon"></i>
+                        </div>
+                        <div class="col">
+                            <h5 class="text-muted">12-155-8899</h5>
+                            <p class="text-arabic m-b-0">مصطفى شاتيلا</p>
+                        </div>
+                    </div>
+                    <div class="row p-t-20 p-b-30">
+                        <div class="col-auto text-right update-meta">
+                            <p class="text-muted m-b-0 d-inline">2 days ago</p>
+                            <i class="feather icon-credit-card bg-success update-icon"></i>
+                        </div>
+                        <div class="col">
+                            <h5 class="text-muted">16-884-1155</h5>
+                            <p class="text-arabic m-b-0">مراد أبو خشبة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <p class="">
+                    <h5>Daily Statistics</h5>
+                </p>
+                <div class="card-header-right">
+                    <ul class="list-unstyled card-option">
+                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                        <li><i class="fa fa-refresh reload-card"></i></li>
+                        <li><i class="fa fa-trash close-card"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-7 b-r-primary">
+                        <p class="text-muted m-b-5">Average Daily Revenue</p>
+                        <h5>70,000 L.L</h5>
+                    </div>
+                    <div class="col-5">
+                        <p class="text-muted m-b-5">Average Visits</p>
+                        <h5>4</h5>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-7  b-r-primary">
+                        <p class="text-muted m-b-5">Top Company</p>
+                        <h5 class="text-arabic">مركز أهيد الطبي</h5>
+                    </div>
+                    <div class="col-5">
+                        <p class="text-muted m-b-5">Active Companies</p>
+                        <h5>3</h5>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-7 b-r-primary">
+                        <p class="text-muted m-b-5">Top Visit Time</p>
+                        <h5>Around 1 PM</h5>
+                    </div>
+                    <div class="col-5">
+                        <p class="text-muted m-b-5">Top Visit Day</p>
+                        <h5>Monday</h5>
+                    </div>
+                </div>
+            </div>
+            <canvas id="tot-lead" height="180"></canvas>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-4">
+        {% include 'parts/company-contact.part.html' %}
+    </div>
+</div>
+<div class="row container-fluid">
+    <!-- social start -->
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h5>Revenues Analytics</h5>
+                <span class="text-muted">The following charts shows total revenues per day for 3 months</span>
+                <div class="card-header-right">
+                    <ul class="list-unstyled card-option">
+                        <li><i class="feather icon-maximize full-card"></i></li>
+                        <li><i class="feather icon-minus minimize-card"></i></li>
+                        <li><i class="feather icon-trash-2 close-card"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-block">
+                <div id="sales-analytics" style="height: 300px;"></div>
+            </div>
+        </div>
+    </div>
+    <!-- social start -->
+</div>
+{% endblock page_body %}
+
+{% block extra_js %}
+<script type="text/javascript" src="..\files\bower_components\chart.js\js\Chart.js"></script>
+<!-- <script type="text/javascript" src="..\files\assets\pages\list-scroll\list-custom.js"></script> -->
+<script src="..\files\assets\pages\widget\amchart\amcharts.js"></script>
+
+
+<script>
+    function valincomearrow(a, b, f) {
+        if (f == null) {
+            f = "rgba(0,0,0,0)";
+        }
+        return {
+            labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
+            datasets: [{
+                label: "",
+                borderColor: a,
+                borderWidth: 3,
+                hitRadius: 30,
+                pointRadius: 0,
+                pointHoverRadius: 4,
+                pointBorderWidth: 2,
+                pointHoverBorderWidth: 12,
+                pointBackgroundColor: Chart.helpers.color("#000000").alpha(0).rgbString(),
+                pointBorderColor: a,
+                pointHoverBackgroundColor: a,
+                pointHoverBorderColor: Chart.helpers.color("#000000").alpha(.1).rgbString(),
+                fill: true,
+                lineTension: 0,
+                backgroundColor: Chart.helpers.color(f).alpha(.7).rgbString(),
+                data: b,
+            }]
+        };
+    }
+
+    function valincomearowbuildoption() {
+        return {
+            maintainAspectRatio: true,
+            title: {
+                display: false,
+            },
+            tooltips: {
+                intersect: true,
+                mode: 'nearest',
+                xPadding: 10,
+                yPadding: 10,
+                caretPadding: 10
+            },
+            legend: {
+                display: false
+            },
+            hover: {
+                mode: 'index'
+            },
+            scales: {
+                xAxes: [{
+                    display: false,
+                    gridLines: false,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Month'
+                    }
+                }],
+                yAxes: [{
+                    display: false,
+                    gridLines: false,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Value'
+                    }
+                }]
+            },
+            elements: {
+                point: {
+                    radius: 40,
+                    borderWidth: 3
+                }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 0
+                }
+            }
+        };
+    }
+
+    $(document).ready(function () {
+        var ctx = document.getElementById('tot-lead').getContext("2d");
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: valincomearrow('#01a9ac', [30000, 15000, 250000, 95000, 300000, 20000, 150000, 20000,
+                    25000, 100000, 25000, 30000, 22000, 310000
+                ],
+                '#01a9ac'),
+            options: valincomearowbuildoption(),
+        });
+
+        $(function () {
+            var amchart = AmCharts.makeChart("sales-analytics", {
+                "type": "serial",
+                "theme": "light",
+                "marginTop": 0,
+                "marginRight": 0,
+                "dataProvider": [{
+                        "date": "15/04/2020",
+                        "value": 611000
+                    },
+                    {
+                        "date": "16/04/2020",
+                        "value": 159000
+                    },
+                    {
+                        "date": "17/04/2020",
+                        "value": 161000
+                    },
+                    {
+                        "date": "18/04/2020",
+                        "value": 169000
+                    },
+                    {
+                        "date": "19/04/2020",
+                        "value": 603000
+                    },
+                    {
+                        "date": "20/04/2020",
+                        "value": 595000
+                    },
+                    {
+                        "date": "21/04/2020",
+                        "value": 571000
+                    },
+                    {
+                        "date": "22/04/2020",
+                        "value": 979000
+                    },
+                    {
+                        "date": "23/04/2020",
+                        "value": 177000
+                    },
+                    {
+                        "date": "24/04/2020",
+                        "value": 842000
+                    },
+                    {
+                        "date": "25/04/2020",
+                        "value": 875000
+                    },
+                    {
+                        "date": "26/04/2020",
+                        "value": 790000
+                    },
+                    {
+                        "date": "27/04/2020",
+                        "value": 309000
+                    },
+                    {
+                        "date": "28/04/2020",
+                        "value": 711000
+                    },
+                    {
+                        "date": "29/04/2020",
+                        "value": 966000
+                    },
+                    {
+                        "date": "30/04/2020",
+                        "value": 4000
+                    },
+                    {
+                        "date": "01/05/2020",
+                        "value": 134000
+                    },
+                    {
+                        "date": "02/05/2020",
+                        "value": 485000
+                    },
+                    {
+                        "date": "03/05/2020",
+                        "value": 552000
+                    },
+                    {
+                        "date": "04/05/2020",
+                        "value": 317000
+                    },
+                    {
+                        "date": "05/05/2020",
+                        "value": 373000
+                    },
+                    {
+                        "date": "06/05/2020",
+                        "value": 498000
+                    },
+                    {
+                        "date": "07/05/2020",
+                        "value": 727000
+                    },
+                    {
+                        "date": "08/05/2020",
+                        "value": 169000
+                    },
+                    {
+                        "date": "09/05/2020",
+                        "value": 251000
+                    },
+                    {
+                        "date": "10/05/2020",
+                        "value": 608000
+                    },
+                    {
+                        "date": "11/05/2020",
+                        "value": 864000
+                    },
+                    {
+                        "date": "12/05/2020",
+                        "value": 939000
+                    },
+                    {
+                        "date": "13/05/2020",
+                        "value": 640000
+                    },
+                    {
+                        "date": "14/05/2020",
+                        "value": 810000
+                    },
+                    {
+                        "date": "15/05/2020",
+                        "value": 834000
+                    },
+                    {
+                        "date": "16/05/2020",
+                        "value": 527000
+                    },
+                    {
+                        "date": "17/05/2020",
+                        "value": 273000
+                    },
+                    {
+                        "date": "18/05/2020",
+                        "value": 530000
+                    },
+                    {
+                        "date": "19/05/2020",
+                        "value": 24000
+                    },
+                    {
+                        "date": "20/05/2020",
+                        "value": 177000
+                    },
+                    {
+                        "date": "21/05/2020",
+                        "value": 44000
+                    },
+                    {
+                        "date": "22/05/2020",
+                        "value": 934000
+                    },
+                    {
+                        "date": "23/05/2020",
+                        "value": 762000
+                    },
+                    {
+                        "date": "24/05/2020",
+                        "value": 341000
+                    },
+                    {
+                        "date": "25/05/2020",
+                        "value": 148000
+                    },
+                    {
+                        "date": "26/05/2020",
+                        "value": 750000
+                    },
+                    {
+                        "date": "27/05/2020",
+                        "value": 761000
+                    },
+                    {
+                        "date": "28/05/2020",
+                        "value": 457000
+                    },
+                    {
+                        "date": "29/05/2020",
+                        "value": 441000
+                    },
+                    {
+                        "date": "30/05/2020",
+                        "value": 410000
+                    },
+                    {
+                        "date": "31/05/2020",
+                        "value": 193000
+                    },
+                    {
+                        "date": "01/06/2020",
+                        "value": 694000
+                    },
+                    {
+                        "date": "02/06/2020",
+                        "value": 765000
+                    },
+                    {
+                        "date": "03/06/2020",
+                        "value": 37000
+                    },
+                    {
+                        "date": "04/06/2020",
+                        "value": 499000
+                    },
+                    {
+                        "date": "05/06/2020",
+                        "value": 114000
+                    },
+                    {
+                        "date": "06/06/2020",
+                        "value": 527000
+                    },
+                    {
+                        "date": "07/06/2020",
+                        "value": 436000
+                    },
+                    {
+                        "date": "08/06/2020",
+                        "value": 341000
+                    },
+                    {
+                        "date": "09/06/2020",
+                        "value": 700000
+                    },
+                    {
+                        "date": "10/06/2020",
+                        "value": 209000
+                    },
+                    {
+                        "date": "11/06/2020",
+                        "value": 580000
+                    },
+                    {
+                        "date": "12/06/2020",
+                        "value": 603000
+                    },
+                    {
+                        "date": "13/06/2020",
+                        "value": 261000
+                    },
+                    {
+                        "date": "14/06/2020",
+                        "value": 611000
+                    },
+                    {
+                        "date": "15/06/2020",
+                        "value": 560000
+                    },
+                    {
+                        "date": "16/06/2020",
+                        "value": 900000
+                    },
+                    {
+                        "date": "17/06/2020",
+                        "value": 79000
+                    },
+                    {
+                        "date": "18/06/2020",
+                        "value": 344000
+                    },
+                    {
+                        "date": "19/06/2020",
+                        "value": 651000
+                    },
+                    {
+                        "date": "20/06/2020",
+                        "value": 703000
+                    },
+                    {
+                        "date": "21/06/2020",
+                        "value": 829000
+                    },
+                    {
+                        "date": "22/06/2020",
+                        "value": 556000
+                    },
+                    {
+                        "date": "23/06/2020",
+                        "value": 668000
+                    },
+                    {
+                        "date": "24/06/2020",
+                        "value": 170000
+                    },
+                    {
+                        "date": "25/06/2020",
+                        "value": 813000
+                    },
+                    {
+                        "date": "26/06/2020",
+                        "value": 162000
+                    },
+                    {
+                        "date": "27/06/2020",
+                        "value": 333000
+                    },
+                    {
+                        "date": "28/06/2020",
+                        "value": 833000
+                    },
+                    {
+                        "date": "29/06/2020",
+                        "value": 421000
+                    },
+                    {
+                        "date": "30/06/2020",
+                        "value": 489000
+                    },
+                    {
+                        "date": "01/07/2020",
+                        "value": 159000
+                    },
+                    {
+                        "date": "02/07/2020",
+                        "value": 527000
+                    },
+                    {
+                        "date": "03/07/2020",
+                        "value": 625000
+                    },
+                    {
+                        "date": "04/07/2020",
+                        "value": 874000
+                    },
+                    {
+                        "date": "05/07/2020",
+                        "value": 378000
+                    },
+                    {
+                        "date": "06/07/2020",
+                        "value": 764000
+                    },
+                    {
+                        "date": "07/07/2020",
+                        "value": 220000
+                    },
+                    {
+                        "date": "08/07/2020",
+                        "value": 968000
+                    },
+                    {
+                        "date": "09/07/2020",
+                        "value": 64000
+                    },
+                    {
+                        "date": "10/07/2020",
+                        "value": 625000
+                    },
+                    {
+                        "date": "11/07/2020",
+                        "value": 946000
+                    },
+                    {
+                        "date": "12/07/2020",
+                        "value": 515000
+                    },
+                    {
+                        "date": "13/07/2020",
+                        "value": 138000
+                    },
+                    {
+                        "date": "14/07/2020",
+                        "value": 703000
+                    },
+                ],
+                "valueAxes": [{
+                    "axisAlpha": 0,
+                    "gridAlpha": 0,
+                    "position": "left"
+                }],
+                "graphs": [{
+                    "id": "g1",
+                    "balloonText": "[[category]]<br><b><span style='font-size:14px;'>[[value]]</span></b>",
+                    "bullet": "round",
+                    "bulletSize": 8,
+                    "lineColor": "#fe5d70",
+                    "lineThickness": 2,
+                    "negativeLineColor": "#fe9365",
+                    "type": "smoothedLine",
+                    "valueField": "value"
+                }],
+                "chartScrollbar": {
+                    "graph": "g1",
+                    "gridAlpha": 0,
+                    "color": "#888888",
+                    "scrollbarHeight": 55,
+                    "backgroundAlpha": 0,
+                    "selectedBackgroundAlpha": 0.1,
+                    "selectedBackgroundColor": "#888888",
+                    "graphFillAlpha": 0,
+                    "autoGridCount": true,
+                    "selectedGraphFillAlpha": 0,
+                    "graphLineAlpha": 0.2,
+                    "graphLineColor": "#c2c2c2",
+                    "selectedGraphLineColor": "#888888",
+                    "selectedGraphLineAlpha": 1
+
+                },
+                "chartCursor": {
+                    "categoryBalloonDateFormat": "DD/MM/YYYY",
+                    "cursorAlpha": 0,
+                    "valueLineEnabled": true,
+                    "valueLineBalloonEnabled": true,
+                    "valueLineAlpha": 0.5,
+                    "fullWidth": true
+                },
+                "dataDateFormat": "DD/MM/YYYY",
+                "categoryField": "date",
+                "categoryAxis": {
+                    // "minPeriod": "YYYY",
+                    "parseDates": true,
+                    "gridAlpha": 0,
+                    "minorGridAlpha": 0,
+                    "minorGridEnabled": true
+                },
+                "export": {
+                    "enabled": true
+                }
+            });
+            amchart.addListener("rendered", zoomChart);
+            if (amchart.zoomChart) {
+                amchart.zoomChart();
+            }
+
+            function zoomChart() {
+                amchart.zoomToIndexes(Math.round(amchart.dataProvider.length * 0.4), Math.round(amchart
+                    .dataProvider.length * 0.55));
+            }
+        });
+    });
+</script>
+{% endblock %}

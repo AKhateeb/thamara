@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+
+
+{% block extra_style %}
+<!-- Data Table Css -->
+<link rel="stylesheet" type="text/css"
+    href="files\bower_components\datatables.net-bs4\css\dataTables.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="files\assets\pages\data-table\css\buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css"
+    href="files\bower_components\datatables.net-responsive-bs4\css\responsive.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css"
+    href="files\assets\pages\data-table\extensions\buttons\css\buttons.dataTables.min.css">
+
+{% endblock extra_style %}
+
+{% block page_header %}
+{% endblock page_header %}
+
+{% block page_body %}
+<div class="page-body">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="cover-profile">
+                <!-- Bootstrap slider card start -->
+                <div class="card">
+                    <div class="card-block">
+                        <img class="img-fluid w-100"
+                             src="assets\images\services\s-1-1.jpg"
+                             alt="First slide">
+                    </div>
+                </div>
+                <!-- Bootstrap slider card end -->
+            </div>
+        </div>
+    </div>
+    <!--profile cover end-->
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- tab header start -->
+            <div class="tab-header card">
+                <ul class="nav nav-tabs md-tabs tab-timeline" role="tablist" id="mytab">
+                    <li class="nav-item w-50">
+                        <a class="nav-link active" data-toggle="tab" href="#personal" role="tab">Service Info</a>
+                        <div class="slide w-50"></div>
+                    </li>
+                    <li class="nav-item w-50">
+                        <a class="nav-link" data-toggle="tab" href="#review" role="tab">Payments</a>
+                        <div class="slide w-50"></div>
+                    </li>
+                </ul>
+            </div>
+            <!-- tab header end -->
+            <!-- tab content start -->
+            <div class="tab-content">
+                <!-- tab panel personal start -->
+                <div class="tab-pane active" id="personal" role="tabpanel">
+                    <!-- personal card start -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="view-desc row">
+                                <div class="col-md-3 text-left">
+                                    <button class="btn btn-primary">
+                                        <i class="fa fa-edit"></i>
+                                        EDIT
+                                    </button>
+                                </div>
+                                <div class="col-md-9">
+                                    <p class="text-arabic text-right">هذا هو الوصف للخدمة الذي يوضح كافة التفاصيل مع توضيح طريقة الاستفادة منها، ولا بأس إن كان طويلاً حتى تصل الصورة بشكل جيد للمستخدم</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-block">
+                            <div class="view-info">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="general-info">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-xl-6">
+                                                    <div class="table-responsive">
+                                                        <table class="table m-0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Name</th>
+                                                                    <td><span class="text-arabic">قلع ضرس أو سحب عصب</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Domain</th>
+                                                                    <td><span class="text-arabic">مراكز طبية</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Company</th>
+                                                                    <td><span class="text-arabic">مركز أهيد الطبي</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Category</th>
+                                                                    <td><span class="text-arabic">معالجة أسنان وجراحتها</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Owner Name</th>
+                                                                    <td><span class="text-arabic">سمير أحمد قاسم</span></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- end of table col-lg-6 -->
+                                                <div class="col-lg-12 col-xl-6">
+                                                    <div class="table-responsive">
+                                                        <table class="table">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th scope="row">Email</th>
+                                                                    <td><a href="#!">
+                                                                        <span>info@ahead.com</span></a>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Land Line</th>
+                                                                    <td>05112223</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Mobile Number</th>
+                                                                    <td>71005566</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Operator</th>
+                                                                    <td><span class="text-arabic">فاديا عبد العال</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th scope="row">Expired in</th>
+                                                                    <td>15-08-2021</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <!-- end of table col-lg-6 -->
+                                            </div>
+                                            <!-- end of row -->
+                                        </div>
+                                        <!-- end of general info -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- tab pane contact end -->
+                <div class="tab-pane" id="review" role="tabpanel">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="dt-responsive table-responsive">
+                                <table id="dt-table" class="table table-striped table-bordered nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>Client Name</th>
+                                        <th>Beneficiary Name</th>
+                                        <th>Amount Paid</th>
+                                        <th>Visit Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-arabic"><a href="client-dashboard.htm">سامر مصطفى منيمنة</a></td>
+                                        <td class="text-arabic"><a href="client-dashboard.htm">فهد سامر منيمنة</a></td>
+                                        <td>75,000 L.L</td>
+                                        <td>15-05-2020 at 07:15 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-arabic"><a href="client-dashboard.htm">بشير موهباني</a></td>
+                                        <td class="text-arabic"><a href="client-dashboard.htm">بشير موهباني</a></td>
+                                        <td>75,000 L.L</td>
+                                        <td>16-05-2020 at 01:45 PM</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-arabic"><a href="client-dashboard.htm">ابراهيم سلامة</a></td>
+                                        <td class="text-arabic"><a href="client-dashboard.htm">رامي سلامة</a></td>
+                                        <td>75,000 L.L</td>
+                                        <td>16-06-2020 at 11:08 AM</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock page_body %}
+
+{% block extra_js %}
+<script src="files\bower_components\datatables.net\js\jquery.dataTables.min.js"></script>
+<script src="files\bower_components\datatables.net-bs4\js\dataTables.bootstrap4.min.js"></script>
+<script src="files\bower_components\datatables.net-responsive\js\dataTables.responsive.min.js"></script>
+
+<script>
+    $('#dt-table').DataTable();
+</script>
+
+{% endblock %}

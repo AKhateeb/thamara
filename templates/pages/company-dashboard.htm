@@ -1,0 +1,437 @@
+{% extends 'base.html' %}
+
+{% block extra_style %}
+<link rel="stylesheet" type="text/css" href="..\files\assets\pages\list-scroll\list.css">
+{% endblock %}
+
+{% block page_header %}
+<h1 class='text-arabic text-center'>مركز أهيد الطبي</h1>
+{% endblock page_header %}
+
+{% block page_body %}
+<div class="row container-fluid">
+    <div class="col-md-3 col-xl-3">
+        <div class="card widget-card-1">
+            <div class="card-block-small">
+                <i class="fa fa-money bg-c-pink card1-icon"></i>
+                <span class="text-c-pink f-w-600">Total Revenue</span>
+                <h4>723,000 L.L</h4>
+                <div>
+                    <span class="f-left m-t-10 text-muted">
+                        <i class="text-c-pink f-16 m-r-10"></i>This Month
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-xl-3">
+        <div class="card widget-card-1">
+            <div class="card-block-small">
+                <i class="feather icon-pie-chart bg-c-blue card1-icon"></i>
+                <span class="text-c-blue f-w-600">Thamara Share</span>
+                <h4>45,000</h4>
+                <div>
+                    <span class="f-left m-t-10 text-muted">
+                        <i class="text-c-blue f-16 m-r-10"></i>Percentage 2%
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-xl-3">
+        <div class="card widget-card-1">
+            <div class="card-block-small">
+                <i class="fa fa-percent bg-c-yellow card1-icon"></i>
+                <span class="text-c-yellow f-w-600">Activity</span>
+                <h4>72 %</h4>
+                <div>
+                    <span class="f-left m-t-10 text-muted">
+                        <i class="text-c-yellow f-16 m-r-10"></i>5th of 40 companies
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-xl-3">
+        <div class="card widget-card-1">
+            <div class="card-block-small">
+                <i class="fa fa-group bg-c-green card1-icon"></i>
+                <span class="text-c-green f-w-600">Clients Visits</span>
+                <h4>25</h4>
+                <div>
+                    <span class="f-left m-t-10 text-muted">
+                        <i class="text-c-green f-16 m-r-10"></i>with 32 beneficiaries
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row container-fluid">
+    <div class="col-xl-4 col-md-4">
+        <div class="card latest-update-card">
+            <div class="card-header">
+                <h5>Recent Visitors</h5>
+                <div class="card-header-right">
+                    <ul class="list-unstyled card-option">
+                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                        <li><i class="fa fa-minus minimize-card"></i></li>
+                        <li><i class="fa fa-refresh reload-card"></i></li>
+                        <li><i class="fa fa-trash close-card"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-block">
+                <div class="latest-update-box">
+                    <div class="row p-t-20 p-b-30">
+                        <div class="col-auto text-right update-meta">
+                            <p class="text-muted m-b-0 d-inline">2 hrs ago</p>
+                            <i class="feather icon-compass bg-info update-icon"></i>
+                        </div>
+                        <div class="col">
+                            <h5 class="text-arabic">نور خطيب</h5>
+                            <p class="text-muted m-b-0 text-arabic">قلع ضرس أو سحب عصب</p>
+                        </div>
+                    </div>
+                    <div class="row p-t-20 p-b-30">
+                        <div class="col-auto text-right update-meta">
+                            <p class="text-muted m-b-0 d-inline">6 hrs ago</p>
+                            <i class="feather icon-compass bg-info update-icon"></i>
+                        </div>
+                        <div class="col">
+                            <h5 class="text-arabic">مصطفى شاتيلا</h5>
+                            <p class="text-muted m-b-0 text-arabic">قلع ضرس أو سحب عصب</p>
+                        </div>
+                    </div>
+                    <div class="row p-t-20 p-b-30">
+                        <div class="col-auto text-right update-meta">
+                            <p class="text-muted m-b-0 d-inline">2 days ago</p>
+                            <i class="feather icon-compass bg-info update-icon"></i>
+                        </div>
+                        <div class="col">
+                            <h5 class="text-arabic">مراد أبو خشبة</h5>
+                            <p class="text-muted m-b-0 text-arabic">تبييض أسنان</p>
+                        </div>
+                    </div>
+                    <div class="row p-t-20 p-b-30">
+                        <div class="col-auto text-right update-meta">
+                            <p class="text-muted m-b-0 d-inline">6 hrs ago</p>
+                            <i class="feather icon-compass bg-info update-icon"></i>
+                        </div>
+                        <div class="col">
+                            <h5 class="text-arabic">مصطفى شاتيلا</h5>
+                            <p class="text-muted m-b-0 text-arabic">قلع ضرس أو سحب عصب</p>
+                        </div>
+                    </div>
+                    <div class="row p-t-20 p-b-30">
+                        <div class="col-auto text-right update-meta">
+                            <p class="text-muted m-b-0 d-inline">2 days ago</p>
+                            <i class="feather icon-compass bg-info update-icon"></i>
+                        </div>
+                        <div class="col">
+                            <h5 class="text-arabic">مراد أبو خشبة</h5>
+                            <p class="text-muted m-b-0 text-arabic">تبييض أسنان</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-4">
+        <div class="card latest-update-card">
+            <div class="card-header">
+                <h5>Recent Payments</h5>
+                <div class="card-header-right">
+                    <ul class="list-unstyled card-option">
+                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                        <li><i class="fa fa-minus minimize-card"></i></li>
+                        <li><i class="fa fa-refresh reload-card"></i></li>
+                        <li><i class="fa fa-trash close-card"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-block">
+                <ul class="scroll-list cards" style="min-height:500px">
+                    <li class="h6">75,000 L.L</li>
+                    <li class="h6">80,000 L.L</li>
+                    <li class="h6">125,000 L.L</li>
+                    <li class="h6">75,000 L.L</li>
+                    <li class="h6">80,000 L.L</li>
+                    <li class="h6">75,000 L.L</li>
+                    <li class="h6">75,000 L.L</li>
+                    <li class="h6">125,000 L.L</li>
+                    <li class="h6">75,000 L.L</li>
+                    <li class="h6">125,000 L.L</li>
+                    <li class="h6">75,000 L.L</li>
+                    <li class="h6">125,000 L.L</li>
+                    <li class="h6">75,000 L.L</li>
+                    <li class="h6">35,000 L.L</li>
+                    <li class="h6">35,000 L.L</li>
+                    <li class="h6">75,000 L.L</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-4 col-md-4">
+        {% include 'parts/company-contact.part.html' %}
+    </div>
+</div>
+<div class="row container-fluid">
+    <div class="col-xl-4 col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <p class="">
+                    <h5>Monthly Statistics</h5>
+                    <br>
+                    <i class="feather icon-chevrons-up m-r-2"></i>
+                    <b class="text-c-green f-w-500"> 18% Higher than last month </b>
+                </p>
+                <div class="card-header-right">
+                    <ul class="list-unstyled card-option">
+                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                        <li><i class="fa fa-refresh reload-card"></i></li>
+                        <li><i class="fa fa-trash close-card"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-6 b-r-default">
+                        <p class="text-muted m-b-5">Average Revenue</p>
+                        <h5>890,000 L.L</h5>
+                    </div>
+                    <div class="col-6">
+                        <p class="text-muted m-b-5">Average Visits</p>
+                        <h5>24</h5>
+                    </div>
+                </div>
+            </div>
+            <canvas id="tot-lead" height="180"></canvas>
+        </div>
+    </div>
+    <div class="col-md-4 col-xl-4">
+        <div class="card">
+            <div class="card-header">
+                <p class="">
+                    <h5>Weekly Visitors</h5>
+                </p>
+                <div class="card-header-right">
+                    <ul class="list-unstyled card-option">
+                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                        <li><i class="fa fa-refresh reload-card"></i></li>
+                        <li><i class="fa fa-trash close-card"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-block">
+                <div id="active-visitors" style="height: 230px"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-xl-4">
+        <div class="card">
+            <div class="card-header">
+                <p class="">
+                    <h5>Services Activity</h5>
+                </p>
+                <div class="card-header-right">
+                    <ul class="list-unstyled card-option">
+                        <li><i class="fa fa-window-maximize full-card"></i></li>
+                        <li><i class="fa fa-refresh reload-card"></i></li>
+                        <li><i class="fa fa-trash close-card"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-block" style="margin-top:-20px">
+                <canvas id="service-activity" height="280"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock page_body %}
+
+{% block extra_js %}
+<script type="text/javascript" src="..\files\bower_components\chart.js\js\Chart.js"></script>
+<script type="text/javascript" src="..\files\assets\pages\list-scroll\list-custom.js"></script>
+
+
+<script>
+    function valincomearrow(a, b, f) {
+        if (f == null) {
+            f = "rgba(0,0,0,0)";
+        }
+        return {
+            labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14"],
+            datasets: [{
+                label: "",
+                borderColor: a,
+                borderWidth: 3,
+                hitRadius: 30,
+                pointRadius: 0,
+                pointHoverRadius: 4,
+                pointBorderWidth: 2,
+                pointHoverBorderWidth: 12,
+                pointBackgroundColor: Chart.helpers.color("#000000").alpha(0).rgbString(),
+                pointBorderColor: a,
+                pointHoverBackgroundColor: a,
+                pointHoverBorderColor: Chart.helpers.color("#000000").alpha(.1).rgbString(),
+                fill: true,
+                lineTension: 0,
+                backgroundColor: Chart.helpers.color(f).alpha(.7).rgbString(),
+                data: b,
+            }]
+        };
+    }
+
+    function valincomearowbuildoption() {
+        return {
+            maintainAspectRatio: true,
+            title: {
+                display: false,
+            },
+            tooltips: {
+                intersect: true,
+                mode: 'nearest',
+                xPadding: 10,
+                yPadding: 10,
+                caretPadding: 10
+            },
+            legend: {
+                display: false
+            },
+            hover: {
+                mode: 'index'
+            },
+            scales: {
+                xAxes: [{
+                    display: false,
+                    gridLines: false,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Month'
+                    }
+                }],
+                yAxes: [{
+                    display: false,
+                    gridLines: false,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Value'
+                    }
+                }]
+            },
+            elements: {
+                point: {
+                    radius: 40,
+                    borderWidth: 3
+                }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    bottom: 0
+                }
+            }
+        };
+    }
+
+    $(document).ready(function () {
+        var chart = AmCharts.makeChart("active-visitors", {
+        "type": "serial",
+        "hideCredits": true,
+        "theme": "light",
+        "dataProvider": [{
+            "type": "Mon",
+            "visits": 4
+        }, {
+            "type": "Tue",
+            "visits": 1
+        }, {
+            "type": "Wed",
+            "visits": 5
+        }, {
+            "type": "Thu",
+            "visits": 6
+        }, {
+            "type": "Fri",
+            "visits": 8
+        }],
+        "valueAxes": [{
+            "gridAlpha": 0.3,
+            "gridColor": "#777",
+            "axisColor": "transparent",
+            "color": '#5cb85c',
+            "dashLength": 0
+        }],
+        "gridAboveGraphs": true,
+        "startDuration": 1,
+        "graphs": [{
+            "balloonText": "Visitors: <b>[[value]]</b>",
+            "fillAlphas": 1,
+            "lineAlpha": 1,
+            "lineColor": "#5cb85c",
+            "type": "column",
+            "valueField": "visits",
+            "columnWidth": 0.5
+        }],
+        "chartCursor": {
+            "categoryBalloonEnabled": false,
+            "cursorAlpha": 0,
+            "zoomable": false
+        },
+        "categoryField": "type",
+        "categoryAxis": {
+            "gridPosition": "start",
+            "gridAlpha": 0,
+            "axesAlpha": 0,
+            "lineAlpha": 0,
+            "fontSize": 12,
+            "color": '#5cb85c',
+            "tickLength": 0
+        },
+        "export": {
+            "enabled": false
+        }
+    });
+        var ctx = document.getElementById('tot-lead').getContext("2d");
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: valincomearrow('#01a9ac', [30000, 15000, 250000, 95000, 300000, 20000, 150000, 20000,
+                    25000, 100000, 25000, 30000, 22000, 310000
+                ],
+                '#01a9ac'),
+            options: valincomearowbuildoption(),
+        });
+
+        var ctx = document.getElementById("service-activity").getContext("2d");
+        window.myDoughnut = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                datasets: [{
+                    data: [10, 65, 25],
+                    backgroundColor: ["#fe9365", "#01a9ac", "#fe5d70"],
+                    label: 'Dataset 1'
+                }],
+                labels: ["قلع ضرس ...", "تبييض أسنان", "حشوة فضية"]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                legend: {
+                    position: 'right',
+                },
+                title: {
+                    display: true,
+                    text: "",
+                },
+                animation: {
+                    animateScale: true,
+                    animateRotate: true
+                }
+            }
+        });
+    });
+</script>
+{% endblock %}

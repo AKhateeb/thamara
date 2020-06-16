@@ -1,0 +1,43 @@
+{% extends 'datatable.html' %}
+
+{% block dt_title%}
+Companies Table
+{% endblock %}
+
+{% block dt_table %}
+<thead>
+    <tr>
+        <th>Branch</th>
+        <th>Name</th>
+        <th>Operator</th>
+        <th>Visits</th>
+        <th>Last Visit</th>
+        <th>Total Revenues</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class='text-arabic'>فرع عرمون</td>
+        <td class='text-arabic'>مركز أهيد الطبي</td>
+        <td class='text-arabic'>سامر المصري</td>
+        <td>61</td>
+        <td data-natural-date>2020/05/25</td>
+        <td>7,320,800 L.L</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+    <tr>
+        <td class='text-arabic'>فرع عرمون</td>
+        <td class='text-arabic'>Evalab</td>
+        <td class='text-arabic'>منير عيتاني</td>
+        <td>27</td>
+        <td data-natural-date>2020/05/25</td>
+        <td>4,087,800 L.L</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+</tbody>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'datatable.html' %}
+
+{% block dt_title%}
+Clients Table
+{% endblock %}
+
+{% block dt_table %}
+<thead>
+    <tr>
+        <th>Branch</th>
+        <th>Full Name</th>
+        <th>Card No.</th>
+        <th>Phone</th>
+        <th>Services</th>
+        <th>Total Paid</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td class='text-arabic'>فرع عرمون</td>
+        <td class='text-arabic'>صبحي أحمد الرفاعي</td>
+        <td class=''>15-223-1052</td>
+        <td class=''><a href="https://wa.me/96170551144" class='link'>70551144</a></td>
+        <td>11</td>
+        <td>7,320,800 L.L</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+    <tr>
+        <td class='text-arabic'>فرع بيروت</td>
+        <td class='text-arabic'>فهد محمد خيال</td>
+        <td class=''>14-703-9988</td>
+        <td class=''><a href="https://wa.me/96170112233" class='link'>70112233</a></td>
+        <td>8</td>
+        <td>320,800 L.L</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+    <tr>
+        <td class='text-arabic'>فرع عرمون</td>
+        <td class='text-arabic'>صبحي أحمد الرفاعي</td>
+        <td class=''>15-223-1052</td>
+        <td class=''><a href="https://wa.me/96170551144" class='link'>70551144</a></td>
+        <td>11</td>
+        <td>7,320,800 L.L</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+    <tr>
+        <td class='text-arabic'>فرع بيروت</td>
+        <td class='text-arabic'>فهد محمد خيال</td>
+        <td class=''>14-703-9988</td>
+        <td class=''><a href="https://wa.me/96170112233" class='link'>70112233</a></td>
+        <td>8</td>
+        <td>320,800 L.L</td>
+        <td>
+            {% include 'parts/actions-menu.part.html' %}
+        </td>
+    </tr>
+
+</tbody>
+{% endblock %}

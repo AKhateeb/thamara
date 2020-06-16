@@ -1,0 +1,42 @@
+{% extends 'datatable.html' %}
+
+{% block dt_title%}
+Cards Table
+{% endblock %}
+
+{% block dt_table %}
+<thead>
+    <tr>
+        <th>Card No.</th>
+        <th>Status</th>
+        <th>Branch</th>
+        <th>Holder Name</th>
+        <th>Expiration Date</th>
+        <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>15-210-8887</td>
+        <td class='text-arabic'><label for="" class='badge bg-warning'>Expired</label></td>
+        <td class='text-arabic'>فرع عرمون</td>
+        <td class='text-arabic'>منير شرف الدين</td>
+        <td>2021-08-05</td>
+        <td>
+            {% include 'cards-actions-menu.part.html' %}
+        </td>
+    </tr>
+    
+    <tr>
+        <td>15-217-4455</td>
+        <td class='text-arabic'><label for="" class='badge bg-warning'>Expired</label></td>
+        <td class='text-arabic'>فرع عرمون</td>
+        <td class='text-arabic'>أحمد مختار</td>
+        <td>2021-10-05</td>
+        <td>
+            {% include 'cards-actions-menu.part.html' %}
+        </td>
+    </tr>
+    
+</tbody>
+{% endblock %}
