@@ -5677,3 +5677,8 @@
 2020-06-22 15:23:19 INFO : 127.0.0.1 - - [22/Jun/2020 15:23:19] "[33mGET /files/bower_components/bootstrap/css/bootstrap.min.css.map HTTP/1.1[0m" 404 -
 2020-06-22 15:23:19 INFO : 127.0.0.1 - - [22/Jun/2020 15:23:19] "[37mGET /files/assets/icon/feather/fonts/feather.woff HTTP/1.1[0m" 200 -
 2020-06-22 15:23:23 INFO : 127.0.0.1 - - [22/Jun/2020 15:23:23] "[33mGET /files/bower_components/popper.js/js/popper.min.js.map HTTP/1.1[0m" 404 -
+2020-06-22 15:40:41 INFO :  * Detected change in 'C:\\Users\\Abdulkader\\Documents\\thamara\\server.py', reloading
+2020-06-22 15:40:55 INFO :  * Restarting with stat
+2020-06-22 15:41:39 WARNING :  * Debugger is active!
+2020-06-22 15:41:39 INFO :  * Debugger PIN: 225-869-817
+2020-06-22 15:41:39 INFO :  * Running on http://127.0.0.1:80/ (Press CTRL+C to quit)
