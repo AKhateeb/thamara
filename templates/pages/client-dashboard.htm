@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+
+{% block extra_style %}
+<!-- Data Table Css -->
+<link rel="stylesheet" type="text/css"
+    href="files\bower_components\datatables.net-bs4\css\dataTables.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css" href="files\assets\pages\data-table\css\buttons.dataTables.min.css">
+<link rel="stylesheet" type="text/css"
+    href="files\bower_components\datatables.net-responsive-bs4\css\responsive.bootstrap4.min.css">
+<link rel="stylesheet" type="text/css"
+    href="files\assets\pages\data-table\extensions\buttons\css\buttons.dataTables.min.css">
+
+{% endblock extra_style %}
+
+{% block page_header %}
+
+{% endblock %}
+
+
+{% block page_body %}
+
+<div class="row container-fluid">
+    <div class="col-md-4 col-xl-4 col-sm-6 col-lg-4">
+        <div class="card widget-statstic-card">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <h5>TOTAL PAID</h5>
+                    <p class="p-t-10 m-b-0 text-c-blue">for 15 services</p>
+                </div>
+            </div>
+            <div class="card-block">
+                <i class="fa fa-shopping-cart st-icon bg-c-blue"></i>
+                <div class="text-left">
+                    <h3 class="d-inline-block">1,450,000 L.L</h3>
+                    <i class="feather icon-arrow-up text-c-green f-30 "></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-xl-4 col-sm-6 col-lg-4">
+        <div class="card widget-statstic-card">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <h5>TOTAL SAVINGS</h5>
+                    <p class="p-t-10 m-b-0 text-c-green">average discount 43%</p>
+                </div>
+            </div>
+            <div class="card-block">
+                <i class="fa fa-percent st-icon bg-c-green"></i>
+                <div class="text-left">
+                    <h3 class="d-inline-block">350,000 L.L</h3>
+                    <i class="feather icon-arrow-up text-c-green f-30 "></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-xl-4 col-sm-6 col-lg-4">
+        <div class="card widget-statstic-card">
+            <div class="card-header">
+                <div class="card-header-left">
+                    <h5>TOTAL DONATIONS</h5>
+                    <p class="p-t-10 m-b-0 text-c-pink">for Thamara Account</p>
+                </div>
+            </div>
+            <div class="card-block">
+                <i class="fa fa-heart st-icon bg-c-pink"></i>
+                <div class="text-left">
+                    <h3 class="d-inline-block">50,000 L.L</h3>
+                    <i class="feather icon-arrow-up text-c-green f-30 "></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row container-fluid">
+    <div class="col-md-8">
+        <div class="card rounded-card user-card">
+            <div class="card-header table-card-header">
+                <h4>Visits History</h4>
+            </div>
+            <div class="card-block">
+                <div class="dt-responsive table-responsive">
+                    <table id="dt-table" class="table table-striped table-bordered nowrap">
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Service</th>
+                                <th>Payment</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-arabic">مركز أهيد الطبي</td>
+                                <td class="text-arabic">تلبيس حشوة فضية</td>
+                                <td class="text-primary h5">75,000 L.L</td>
+                                <td>7 days ago</td>
+                            </tr>
+                            <tr>
+                                <td class="text-arabic">مركز أهيد الطبي</td>
+                                <td class="text-arabic">تلبيس حشوة فضية</td>
+                                <td class="text-primary h5">75,000 L.L</td>
+                                <td>7 days ago</td>
+                            </tr>
+                            <tr>
+                                <td class="text-arabic">مركز أهيد الطبي</td>
+                                <td class="text-arabic">تلبيس حشوة فضية</td>
+                                <td class="text-primary h5">75,000 L.L</td>
+                                <td>7 days ago</td>
+                            </tr>
+                            <tr>
+                                <td class="text-arabic">مركز أهيد الطبي</td>
+                                <td class="text-arabic">تلبيس حشوة فضية</td>
+                                <td class="text-primary h5">75,000 L.L</td>
+                                <td>7 days ago</td>
+                            </tr>
+                            <tr>
+                                <td class="text-arabic">مركز أهيد الطبي</td>
+                                <td class="text-arabic">تلبيس حشوة فضية</td>
+                                <td class="text-primary h5">75,000 L.L</td>
+                                <td>7 days ago</td>
+                            </tr>
+                            <tr>
+                                <td class="text-arabic">مركز أهيد الطبي</td>
+                                <td class="text-arabic">تلبيس حشوة فضية</td>
+                                <td class="text-primary h5">75,000 L.L</td>
+                                <td>7 days ago</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card rounded-card user-card">
+            <div class="card-block">
+                <div class="user-content">
+                    <span class="text-arabic h3">محمد سلامة</span>
+                    <p class="m-b-0 text-muted text-arabic h6">فرع بيروت</p>
+                </div>
+                <div class="text-center list-group list-group-flush" style="line-height:1.5rem;margin-top:25px">
+                    <a href="#" class="text-primary list-group-item p-3 h5 ">
+                        <span> <i class="fa fa-credit-card"></i> </span>
+                        <span>15-125-1254</span>
+                    </a>
+                    <a href="#" class="text-primary list-group-item p-3 h5 ">
+                        <span> <i class="fa fa-phone"></i> </span>
+                        <span>01 555 333</span>
+                    </a>
+                    <a href="https://wa.me/96170101010" target="_blank" class=" h5 text-success list-group-item p-3">
+                        <span> <i class="fa fa-whatsapp"></i> </span>
+                        <span>70 101010</span>
+                    </a>
+                    <a href="mailto:center@example.com" target="_blank" class="h5 text-muted list-group-item p-3">
+                        <span> <i class="fa fa-envelope-o"></i> </span>
+                        <span>center@example.com</span>
+                    </a>
+                    <a href="#" target="_blank" class="h5 text-muted list-group-item p-3">
+                        <span> <i class="fa fa-home"></i> </span>
+                        <span>ARAMOUN</span>
+                    </a>
+                    <a href="#" target="_blank" class="h5 text-success list-group-item p-3">
+                        <span> <i class="fa fa-calendar-check-o"></i> </span>
+                        <span>Registered in: 15-05-2020</span>
+                    </a>
+                    <a href="#" target="_blank" class="h5 text-primary list-group-item p-3">
+                        <span> <i class="fa fa-user-circle"></i> </span>
+                        <span> &nbsp; <b>5</b> Beneficiaries</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock%}
+
+{% block extra_js %}
+<!-- data-table js -->
+<script src="files\bower_components\datatables.net\js\jquery.dataTables.min.js"></script>
+<script src="files\bower_components\datatables.net-buttons\js\dataTables.buttons.min.js"></script>
+<script src="files\assets\pages\data-table\js\jszip.min.js"></script>
+<script src="files\assets\pages\data-table\js\pdfmake.min.js"></script>
+<script src="files\assets\pages\data-table\js\vfs_fonts.js"></script>
+<script src="files\assets\pages\data-table\extensions\buttons\js\dataTables.buttons.min.js"></script>
+<script src="files\assets\pages\data-table\extensions\buttons\js\buttons.flash.min.js"></script>
+<script src="files\assets\pages\data-table\extensions\buttons\js\jszip.min.js"></script>
+<script src="files\assets\pages\data-table\extensions\buttons\js\vfs_fonts.js"></script>
+<script src="files\assets\pages\data-table\extensions\buttons\js\buttons.colVis.min.js"></script>
+<script src="files\bower_components\datatables.net-buttons\js\buttons.print.min.js"></script>
+<script src="files\bower_components\datatables.net-buttons\js\buttons.html5.min.js"></script>
+<script src="files\bower_components\datatables.net-bs4\js\dataTables.bootstrap4.min.js"></script>
+<script src="files\bower_components\datatables.net-responsive\js\dataTables.responsive.min.js"></script>
+<script src="files\bower_components\datatables.net-responsive-bs4\js\responsive.bootstrap4.min.js"></script>
+<script src="files\assets\pages\data-table\extensions\buttons\js\extension-btns-custom.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#dt-table').DataTable();
+    });
+</script>
+{% endblock extra_js %}

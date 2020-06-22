@@ -152,22 +152,22 @@
             </div>
             <div class="card-block">
                 <ul class="scroll-list cards" style="min-height:500px">
-                    <li class="h6">75,000 L.L</li>
-                    <li class="h6">80,000 L.L</li>
-                    <li class="h6">125,000 L.L</li>
-                    <li class="h6">75,000 L.L</li>
-                    <li class="h6">80,000 L.L</li>
-                    <li class="h6">75,000 L.L</li>
-                    <li class="h6">75,000 L.L</li>
-                    <li class="h6">125,000 L.L</li>
-                    <li class="h6">75,000 L.L</li>
-                    <li class="h6">125,000 L.L</li>
-                    <li class="h6">75,000 L.L</li>
-                    <li class="h6">125,000 L.L</li>
-                    <li class="h6">75,000 L.L</li>
-                    <li class="h6">35,000 L.L</li>
-                    <li class="h6">35,000 L.L</li>
-                    <li class="h6">75,000 L.L</li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">75,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">80,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">125,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">75,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">80,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">75,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">75,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">125,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">75,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">125,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">75,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">125,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">75,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">35,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">35,000 L.L</span></li>
+                    <li><span class="text-arabic">سامر فلاحة</span><span class="h6 pull-right">75,000 L.L</span></li>
                 </ul>
             </div>
         </div>
@@ -242,8 +242,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="card-block" style="margin-top:-20px">
-                <canvas id="service-activity" height="280"></canvas>
+            <div class="card-block">
+                <canvas id="service-activity" height="280" style="margin-top:-50px"></canvas>
             </div>
         </div>
     </div>
@@ -412,15 +412,15 @@
                 datasets: [{
                     data: [10, 65, 25],
                     backgroundColor: ["#fe9365", "#01a9ac", "#fe5d70"],
-                    label: 'Dataset 1'
+                    label: 'Company Services Usage'
                 }],
                 labels: ["قلع ضرس ...", "تبييض أسنان", "حشوة فضية"]
             },
             options: {
-                maintainAspectRatio: false,
-                responsive: true,
+                maintainAspectRatio: true,
+                responsive: false,
                 legend: {
-                    position: 'right',
+                    position: 'bottom',
                 },
                 title: {
                     display: true,

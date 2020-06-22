@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+
+{% block extra_style %}
+<link href="..\files\assets\pages\jquery.filer\css\jquery.filer.css" type="text/css" rel="stylesheet">
+<link href="..\files\assets\pages\jquery.filer\css\themes\jquery.filer-dragdropbox-theme.css" type="text/css"
+    rel="stylesheet">
+{% endblock %}
+
+{% block page_header %}
+<div class="row align-items-end">
+    <div class="col-lg-8">
+        <div class="page-header-title">
+            <div class="d-inline">
+                <h4>New Service</h4>
+                <span>Create a new service, you need to fill all inputs then wait for the admin approval</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="page-header-breadcrumb">
+            <ul class="breadcrumb-title">
+                <li class="breadcrumb-item">
+                    <a href="#"> <i class="feather icon-home"></i> </a>
+                </li>
+                <li class="breadcrumb-item"><a href="all-services.htm">All Services</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock page_header %}
+
+{% block page_body %}
+<div class="col-md-7">
+    <div class="card">
+        <div class="card-header">
+            <h5>Service Info</h5>
+            <div class="card-header-right">
+                <ul class="list-unstyled card-option">
+                    <li><i class="feather icon-maximize full-card"></i></li>
+                    <li><i class="feather icon-minus minimize-card"></i></li>
+                    <li><i class="feather icon-trash-2 close-card"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-block">
+            <form action="#" method="POST">
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Name</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="service-name" placeholder="Service Name ...">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Description</label>
+                    <div class="col-sm-9">
+                        <textarea rows="5" cols="5" class="form-control" name="service-description" placeholder="Service Description"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Domain</label>
+                    <div class="col-sm-9">
+                        <select name="select" class="form-control">
+                            <option value="opt0">Select One Value Only</option>
+                            <option value="opt1" class="text-arabic">ملابس</option>
+                            <option value="opt2" class="text-arabic">مأكولات</option>
+                            <option value="opt3" class="text-arabic">مرافق عامة</option>
+                            <option value="opt4" class="text-arabic">خدمات طبية</option>
+                            <option value="opt5" class="text-arabic">مكتبات</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Category</label>
+                    <div class="col-sm-9">
+                        <select name="select" class="form-control">
+                            <option value="opt0">Select One Value Only</option>
+                            <option value="opt1" class="text-arabic">الفرع 1</option>
+                            <option value="opt2" class="text-arabic">الفرع 2</option>
+                            <option value="opt3" class="text-arabic">الفرع 3</option>
+                            <option value="opt4" class="text-arabic">الفرع 4</option>
+                            <option value="opt5" class="text-arabic">الفرع 5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Available From</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="date" name="available-from">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Available Till</label>
+                    <div class="col-sm-9">
+                        <input class="form-control" type="date" name="available-to">
+                    </div>
+                </div>
+                <div class="form-group container-fluid">
+                    <button class="btn btn-success btn-block ">
+                        <i class="icofont icofont-check-circled"></i>
+                        Save Service
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-5">
+    <div class="card">
+        <div class="card-header">
+            <h5>Service Info</h5>
+            <div class="card-header-right">
+                <ul class="list-unstyled card-option">
+                    <li><i class="feather icon-maximize full-card"></i></li>
+                    <li><i class="feather icon-minus minimize-card"></i></li>
+                    <li><i class="feather icon-trash-2 close-card"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-block">
+            <form action="#" method="POST">
+                <div class="col-md-12">
+                    <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Service Images</label>
+                    </div>
+                    <input type="file" name="files[]" id="filer_input1" multiple="multiple">
+                <br>
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <input type="number" class="form-control form-control-lg" name="service-price" placeholder="Price (L.L) ...">
+                    </div>
+                </div>
+                <div class="col-md-12 text-center">
+                    <span class="text-muted h5">
+                        <b>Thamara Share</b>
+                        <span class="p-3">15,000 L.L</span>
+                    </span>
+                </div>
+                <br>
+                <div class="col-md-12">
+                    <div class="checkbox-color checkbox-success">
+                        <input id="service-agreement" type="checkbox" checked="">
+                        <label for="service-agreement">
+                            I agree with conditions of <a href="#" class="text-primary">Thamara Advertisements</a>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block extra_js %}
+<script>
+    const URL_UPLOAD = "/upload";
+</script>
+<script src="..\files\assets\pages\jquery.filer\js\jquery.filer.min.js"></script>
+<script src="..\files\assets\pages\filer\custom-filer.js" type="text/javascript"></script>
+<script src="..\files\assets\pages\filer\jquery.fileuploads.init.js" type="text/javascript"></script>
+{% endblock extra_js %}

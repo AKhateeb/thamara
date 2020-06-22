@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% block page_header %}
+<div class="row align-items-end">
+    <div class="col-lg-8">
+        <div class="page-header-title">
+            <div class="d-inline">
+                <h4>Project Settings</h4>
+                <span>Admins can change settings of Thamara project, changes needs to be saved when they're done</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock page_header %}
+
+
+{% block page_body %}
+<div class="col-xl-12 col-sm-12 col-md-12">
+    <div class="card latest-update-card">
+        <div class="card-header">
+
+        </div>
+        <div class="card-block">
+            <div class="col-lg-12 col-xl-12 col-sm-12">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs md-tabs tabs-left b-none" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab" 
+                            aria-expanded="true"><span class="h4">Clients</span></a>
+                        <div class="slide"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tab2" role="tab"
+                            aria-expanded="false"><span class="h4">Companies</span></a>
+                        <div class="slide"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tab3" role="tab"
+                            aria-expanded="false"><span class="h4">Operators</span></a>
+                        <div class="slide"></div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#tab4" role="tab"
+                            aria-expanded="false"><span class="h4">General</span></a>
+                        <div class="slide"></div>
+                    </li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content tabs-left-content card-block">
+                    <div class="tab-pane active" id="tab1" role="tabpanel" aria-expanded="true">
+                        <div class="row container-fluid">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <form action="#" class="">
+                                    <div class="row container-fluid">
+                                        <div class="checkbox-color checkbox-success">
+                                            <input id="checkbox1" type="checkbox" checked="">
+                                            <label for="checkbox1">
+                                                Clients MUST show cards when purchasing a service
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div class="row container-fluid">
+                                        <div class="checkbox-color checkbox-success">
+                                            <input id="checkbox2" type="checkbox" checked="">
+                                            <label for="checkbox2">
+                                                Cards MUST be valid for at least 3 days
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group row">
+                                        <label class="col-sm-8 col-form-label">
+                                            Maximum number of beneficiaries per client
+                                        </label>
+                                        <div class="col-sm-4">
+                                            <input type="number" class="form-control" max="10" min="1" value="3">
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <label class="col-sm-12 col-lg-12 col-form-label">Cost of issuing a new card</label>
+                                        <div class="col-sm-12 col-lg-12">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Price (L.L)">
+                                                <span class="input-group-addon" id="card-issueing">L.L</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <label class="col-sm-12 col-lg-12 col-form-label">Cost of card renewal</label>
+                                        <div class="col-sm-12 col-lg-12">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="Price (L.L)">
+                                                <span class="input-group-addon" id="card-renewal">L.L</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab2" role="tabpanel" aria-expanded="false">
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <h4>Settings</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab3" role="tabpanel" aria-expanded="false">
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <h4>Settings</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab4" role="tabpanel" aria-expanded="false">
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <h4>Settings</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{% endblock extra_js %}

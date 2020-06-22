@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+
+{% block extra_style %}
+<link href="..\files\assets\pages\jquery.filer\css\jquery.filer.css" type="text/css" rel="stylesheet">
+<link href="..\files\assets\pages\jquery.filer\css\themes\jquery.filer-dragdropbox-theme.css" type="text/css"
+    rel="stylesheet">
+{% endblock %}
+
+{% block page_header %}
+<div class="row align-items-end">
+    <div class="col-lg-8">
+        <div class="page-header-title">
+            <div class="d-inline">
+                <h4>Sync Data</h4>
+                <span>Panels below shows how the operator can upload the daily payments of a company which can't use
+                    Thamara online</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="page-header-breadcrumb">
+            <ul class="breadcrumb-title">
+                <li class="breadcrumb-item">
+                    <a href="#"> <i class="feather icon-home"></i> </a>
+                </li>
+                <li class="breadcrumb-item"><a href="company-dashboard.htm">Company Dashboard</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock page_header %}
+
+{% block page_body %}
+<div class="col-md-8">
+    <div class="card">
+        <div class="card-header">
+            <h5>File Upload</h5>
+            <div class="card-header-right">
+                <ul class="list-unstyled card-option">
+                    <li><i class="feather icon-maximize full-card"></i></li>
+                    <li><i class="feather icon-minus minimize-card"></i></li>
+                    <li><i class="feather icon-trash-2 close-card"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-block">
+            <blockquote class="blockquote">
+                <p>You need to make sure that uploaded sheets should match headers of Thamara Template
+                    <br>
+                    Click <a href="company-payments-template.csv" class="text-primary" target="_blank">HERE</a> to
+                    download the Template for more details
+                </p>
+            </blockquote>
+            <div class="row container-fluid">
+                <div class="col-lg-5 col-md-12">
+                    <h4 class="sub-title">Company</h4>
+                    <p>Select the <code>company</code> your for the uploaded payments file</p>
+                    <div class="form-group">
+                        <select name="select" class="form-control">
+                            <option value="opt0">Select One Value Only</option>
+                            <option value="opt1" class="text-arabic">الشركة 1</option>
+                            <option value="opt2" class="text-arabic">الشركة 2</option>
+                            <option value="opt3" class="text-arabic">الشركة 3</option>
+                            <option value="opt4" class="text-arabic">الشركة 4</option>
+                            <option value="opt5" class="text-arabic">الشركة 5</option>
+                        </select>
+                    </div>
+                    <br>
+                    <h4 class="sub-title">Date</h4>
+                    <p>You upload the payments file for this date<code>usually set for today</code></p>
+                    <input class="form-control" type="date">
+                </div>
+                <div class="col-lg-7 col-md-12">
+                    <input type="file" name="files[]" id="filer_input1" multiple="multiple">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card">
+        <div class="card-header">
+            <h5>Payments Info</h5>
+            <div class="card-header-right">
+                <ul class="list-unstyled card-option">
+                    <li><i class="feather icon-maximize full-card"></i></li>
+                    <li><i class="feather icon-trash-2 close-card"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row container-fluid">
+                <div class="row align-items-center m-l-0">
+                    <div class="col-auto">
+                        <i class="fa fa-inbox f-30 text-c-green"></i>
+                    </div>
+                    <div class="col-auto">
+                        <h6 class="text-muted m-b-10">Total Payments</h6>
+                        <h2 class="m-b-0">595,000 L.L</h2>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row container-fluid">
+                <div class="row align-items-center m-l-0">
+                    <div class="col-auto">
+                        <i class="fa fa-percent f-30 text-warning   "></i>
+                    </div>
+                    <div class="col-auto">
+                        <h6 class="text-muted m-b-10">Thamara Share</h6>
+                        <h2 class="m-b-0">45,000 L.L</h2>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row container-fluid">
+                <div class="row align-items-center m-l-0">
+                    <div class="col-auto">
+                        <i class="fa fa-gears f-30 text-c-pink"></i>
+                    </div>
+                    <div class="col-auto">
+                        <h6 class="text-muted m-b-10">Total Services</h6>
+                        <h2 class="m-b-0">19</h2>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row container-fluid">
+                <div class="row align-items-center m-l-0">
+                    <div class="col-auto">
+                        <i class="fa fa-sign-in f-30 text-c-blue"></i>
+                    </div>
+                    <div class="col-auto">
+                        <h6 class="text-muted m-b-10">New Clients</h6>
+                        <h2 class="m-b-0">25</h2>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row container-fluid">
+                <div class="col">
+                    <p class="text-danger text-center">
+                        Please check numbers above with company operator before you <em>Confirm</em>
+                    </p>
+                    <button class="btn btn-success btn-block ">
+                        <i class="icofont icofont-check-circled"></i>
+                        Confirm & Save
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+
+<script>
+    const URL_UPLOAD = "/upload";
+</script>
+<!-- jquery file upload js -->
+<script src="..\files\assets\pages\jquery.filer\js\jquery.filer.min.js"></script>
+<script src="..\files\assets\pages\filer\custom-filer.js" type="text/javascript"></script>
+<script src="..\files\assets\pages\filer\jquery.fileuploads.init.js" type="text/javascript"></script>
+{% endblock extra_js %}

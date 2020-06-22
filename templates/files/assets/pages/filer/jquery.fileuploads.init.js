@@ -98,7 +98,7 @@ $(document).ready(function(){
             drop: null,
         },
         uploadFile: {
-            url: "../plugins/jquery.filer/php/upload.php",
+            url: URL_UPLOAD,
             data: null,
             type: 'POST',
             enctype: 'multipart/form-data',
@@ -158,7 +158,7 @@ $(document).ready(function(){
                 filesLimit: "Only {{fi-limit}} files are allowed to be uploaded.",
                 filesType: "Only Images are allowed to be uploaded.",
                 filesSize: "{{fi-name}} is too large! Please upload file up to {{fi-maxSize}} MB.",
-                filesSizeAll: "Files you've choosed are too large! Please upload files up to {{fi-maxSize}} MB."
+                filesSizeAll: "Files you've chosen are too large! Please upload files up to {{fi-maxSize}} MB."
             }
         }
     });

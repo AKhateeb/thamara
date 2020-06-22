@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+
+{% block extra_style %}{% endblock %}
+
+{% block page_header %}
+<div class="row align-items-end">
+    <div class="col-lg-8">
+        <div class="page-header-title">
+            <div class="d-inline">
+                <h4>New Visit</h4>
+                <span>The company operator search for the client and add the selected services then confirm client's
+                    payment</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="page-header-breadcrumb">
+            <ul class="breadcrumb-title">
+                <li class="breadcrumb-item">
+                    <a href="#"><i class="feather icon-home"></i></a>
+                </li>
+                <li class="breadcrumb-item"><a href="marketplace.htm">Marketplace</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock page_header %}
+
+{% block page_body %}
+<div class="row container-fluid">
+    <div class="col-sm-12">
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control" autofocus name="client-search"
+                placeholder="Search for client name, phone, card number, ...">
+            <span class="input-group-addon" id="btn-client-search">
+                <i class="fa fa-search"></i>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="col-xl-4 col-md-5">
+    <div class="card">
+        <div class="card-block">
+            <div class="user-content">
+                <span class="text-arabic h3">محمد سلامة</span>
+                <p class="m-b-0 text-muted text-arabic h6">فرع بيروت</p>
+            </div>
+            <div class="text-center list-group list-group-flush" style="line-height:1.5rem;margin-top:25px">
+                <a href="#" class="text-primary list-group-item p-3 h5 ">
+                    <span> <i class="fa fa-credit-card"></i> </span>
+                    <span>15-125-1254</span>
+                </a>
+                <a href="#" class="text-primary list-group-item p-3 h5 ">
+                    <span> <i class="fa fa-phone"></i> </span>
+                    <span>01 555 333</span>
+                </a>
+                <a href="https://wa.me/96170101010" target="_blank" class=" h5 text-success list-group-item p-3">
+                    <span> <i class="fa fa-whatsapp"></i> </span>
+                    <span>70 101010</span>
+                </a>
+                <a href="mailto:center@example.com" target="_blank" class="h5 text-muted list-group-item p-3">
+                    <span> <i class="fa fa-envelope-o"></i> </span>
+                    <span>center@example.com</span>
+                </a>
+                <a href="#" target="_blank" class="h5 text-muted list-group-item p-3">
+                    <span> <i class="fa fa-home"></i> </span>
+                    <span>ARAMOUN</span>
+                </a>
+                <a href="#" target="_blank" class="h5 text-success list-group-item p-3">
+                    <span> <i class="fa fa-calendar-check-o"></i> </span>
+                    <span>Registered in: 15-05-2020</span>
+                </a>
+                <a href="#" target="_blank" class="h5 text-primary list-group-item p-3">
+                    <span> <i class="fa fa-user-circle"></i> </span>
+                    <span> &nbsp; <b>5</b> Beneficiaries</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-xl-8 col-md-7">
+    <div class="card">
+        <div class="card-header">
+            <h5>Clients Services</h5>
+            <div class="card-header-right">
+                <ul class="list-unstyled card-option">
+                    <li><i class="fa fa-window-maximize full-card"></i></li>
+                    <li><i class="fa fa-minus minimize-card"></i></li>
+                    <li><i class="fa fa-refresh reload-card"></i></li>
+                    <li><i class="fa fa-trash close-card"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div class="card-block table-border-style">
+            <form action="#" method="post" id="service-clients-form">
+                <div class="container-fluid btn-action-row text-center">
+                    <button class="btn btn-primary waves-effect waves-light" type="button" onclick="add_list_item()">
+                        <i class="fa fa-plus m-r-15"></i>
+                        Add Service</button>
+                        &nbsp;
+                        &nbsp;
+                    <button class="btn btn-default waves-effect waves-light" type="button" onclick="remove_list_item()">
+                        <i class="fa fa-minus"></i>
+                        Remove Service</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header"></div>
+        <div class="card-block">
+            <div class="container-fluid">
+                <div class="row container-fluid">
+                    <div class="row align-items-center m-l-0">
+                        <div class="col-md-1">
+                            <i class="fa fa-inbox f-30 text-c-green"></i>
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="text-muted m-b-10">TOTAL INVOICE</h6>
+                            <h3 class="m-b-0">95,000 L.L</h3>
+                        </div>
+                        <div class="col-md-4">
+                                <h6 class="text-muted m-b-10">AMOUNT PAID</h6>
+                                <input type="text" class="h4 form-control form-control-lg" placeholder="95,000 L.L">
+                        </div>
+                        <div class="col-md-2">
+                            <span class="btn btn-success">
+                                <i class="fa fa-save f-20 text-white"></i>
+                                <span class="h5">SAVE</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function add_list_item(){
+        let row = `<div class="form-group row container-fluid service-input-row">
+                    <div class="col-md-4">
+                        <select class="form-control required">
+                            <option value="01" class="text-arabic">قلع ضرس</option>
+                            <option value="02" class="text-arabic">تلبيس حشوة</option>
+                            <option value="03" class="text-arabic">تبييض أسنان</option>
+                            <option value="04" class="text-arabic">معالجة نخر</option>
+                            <option value="05" class="text-arabic">سحب عصب</option>
+                        </select>
+                    </div>
+                    <div class="row col-md-4">
+                        <input type="text" class="form-control" placeholder="Beneficiary Name" required maxlength="30">
+                    </div>
+                    <div class="row col-md-4">
+                        <input type="text" class="form-control" placeholder="Note" maxlength="80">
+                    </div>
+                </div>`
+        $("form#service-clients-form").prepend(row);
+        console.log("Added");
+    }
+
+    function remove_list_item(){
+        $("div.service-input-row").first().remove();
+    }
+
+$(document).ready(function () {
+    add_list_item();
+});
+</script>
+{% endblock extra_js %}

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+
 {% block extra_style %}
 <!--forms-wizard css-->
 <link rel="stylesheet" type="text/css" href="..\files\bower_components\jquery.steps\css\jquery.steps.css">
@@ -11,8 +12,8 @@
     <div class="col-lg-8">
         <div class="page-header-title">
             <div class="d-inline">
-                <h4>New Client</h4>
-                <span>Fill inputs below to create a new client <code> with valid card number!</code></span>
+                <h4>New Company</h4>
+                <span>Fill inputs below to create a new company <code> after hard copy agreement</code>!</span>
             </div>
         </div>
     </div>
@@ -22,7 +23,7 @@
                 <li class="breadcrumb-item">
                     <a href="#"> <i class="feather icon-home"></i> </a>
                 </li>
-                <li class="breadcrumb-item"><a href="all-clients.htm">Clients</a>
+                <li class="breadcrumb-item"><a href="all-companies.htm">Companies</a>
                 </li>
             </ul>
         </div>
@@ -35,7 +36,7 @@
     <!-- Vertical Wizard card start -->
     <div class="card">
         <div class="card-header">
-            <h4>Client Info</h4>
+            <h4>Company Info</h4>
         </div>
         <div class="card-block">
             <div class="row">
@@ -47,75 +48,47 @@
                                 <fieldset>
                                     <div class="form-group row">
                                         <div class="col-sm-12">
-                                            <label for="firstName" class="block">First Name</label>
+                                            <label for="businessName" class="block">Business Name</label>
                                         </div>
                                         <div class="col-sm-12">
-                                            <input id="firstName" name="firstName" type="text" class=" form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-12">
-                                            <label for="fatherName" class="block">Father Name</label>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <input id="fatherName" name="fatherName" type="text" class=" form-control">
+                                            <input id="businessName" name="businessName" type="text" class=" form-control">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-12">
-                                            <label for="lastName" class="block">Last Name</label>
+                                            <label for="ownerName" class="block">Owner Name</label>
                                         </div>
                                         <div class="col-sm-12">
-                                            <input id="lastName" name="lastName" type="text" class=" form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-12">
-                                            <label for="phone-2" class="block">Phone #</label>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <input id="phone-22" name="phone" type="text" class="form-control phone">
+                                            <input id="ownerName" name="ownerName" type="text" class=" form-control">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-12">
-                                            <label for="benCount" class="block">Number of Beneficiaries</label>
+                                            <label for="operatorName" class="block">Operator Name</label>
                                         </div>
                                         <div class="col-sm-12">
-                                            <input id="benCount" name="benCount" type="number" class="form-control">
+                                            <input id="operatorName" name="operatorName" type="text" class=" form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <label for="landLine" class="block">Landline</label>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <input id="landLine" name="landLine" type="text" class="form-control phone">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <label for="mobilePhone" class="block">Mobile Phone</label>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <input id="mobilePhone" name="mobilePhone" type="text" class="form-control phone">
                                         </div>
                                     </div>
                                 </fieldset>
-                                <h3> General Information </h3>
+                                <h3> Business Information </h3>
                                 <fieldset>
-                                    <div class="form-group row">
-                                        <div class="col-sm-12">
-                                            <label for="date" class="block">Date Of Birth</label>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <input id="date22" name="Date Of Birth" type="date"
-                                                class="form-control date-control">
-                                        </div>
-                                    </div>
-                               
-                                    <div class="form-group row">
-                                        <div class="col-sm-12">
-                                            <label for="refereed-by" class="block">Refereed By</label>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <input id="refereed-by" name="refereed-by" type="text"
-                                                class="form-control required">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-12">
-                                            <label for="Country-2" class="block">Full Address</label>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <textarea id="Country-22" name="Country" rows="4"
-                                                class="form-control"></textarea>
-                                        </div>
-                                    </div>
                                     <div class="form-group row">
                                         <div class="col-sm-12">Select City</div>
                                         <div class="col-sm-12">
@@ -132,6 +105,15 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <label for="detailedAddress" class="block">Detailed Address</label>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <textarea id="detailedAddress" name="detailedAddress" rows="4"
+                                                class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
                                         <div class="col-sm-12">Select Branch</div>
                                         <div class="col-sm-12">
                                             <select class="form-control required">
@@ -141,12 +123,20 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <label for="detailedAddress" class="block">Logo</label>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <input type="file" class="form-control">
+                                        </div>
+                                    </div>
                                 </fieldset>
                                 <h3> Registration </h3>
                                 <fieldset>
                                     <div class="form-group row">
                                         <div class="col-sm-12">
-                                            <label for="card-no" class="block">Card NO.</label>
+                                            <label for="card-no" class="block">Contract NO.</label>
                                         </div>
                                         <div class="col-sm-12">
                                             <input id="card-no" name="card-no" type="tel" class=" form-control">

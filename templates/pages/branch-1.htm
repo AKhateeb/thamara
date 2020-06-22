@@ -16,15 +16,15 @@
             <div class="card-header">
                 <div class="card-header-left">
                     <h5>Total Revenues</h5>
-                    <p class="p-t-10 m-b-0 text-c-yellow">Compared to last month</p>
+                    <p class="p-t-10 m-b-0 text-c-green">Compared to last month</p>
                 </div>
             </div>
             <div class="card-block">
-                <i class="feather icon-sliders st-icon bg-c-yellow"></i>
+                <i class="feather icon-sliders st-icon bg-c-green"></i>
                 <div class="text-left">
                     <h3 class="d-inline-block">5,450,000 L.L</h3>
                     <i class="feather icon-arrow-up f-30 text-c-green"></i>
-                    <span class="f-right bg-c-yellow">23%</span>
+                    <!-- <span class="f-right bg-c-green">23%</span> -->
                 </div>
             </div>
         </div>
@@ -121,16 +121,6 @@
                             <p class="text-arabic m-b-0">مصطفى شاتيلا</p>
                         </div>
                     </div>
-                    <div class="row p-t-20 p-b-30">
-                        <div class="col-auto text-right update-meta">
-                            <p class="text-muted m-b-0 d-inline">2 days ago</p>
-                            <i class="feather icon-credit-card bg-success update-icon"></i>
-                        </div>
-                        <div class="col">
-                            <h5 class="text-muted">16-884-1155</h5>
-                            <p class="text-arabic m-b-0">مراد أبو خشبة</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -161,7 +151,6 @@
                     </div>
                 </div>
                 <br>
-                <br>
                 <div class="row">
                     <div class="col-7  b-r-primary">
                         <p class="text-muted m-b-5">Top Company</p>
@@ -172,7 +161,6 @@
                         <h5>3</h5>
                     </div>
                 </div>
-                <br>
                 <br>
                 <div class="row">
                     <div class="col-7 b-r-primary">
@@ -185,11 +173,40 @@
                     </div>
                 </div>
             </div>
-            <canvas id="tot-lead" height="180"></canvas>
+            <canvas id="tot-lead" height="150"></canvas>
         </div>
     </div>
     <div class="col-xl-4 col-md-4">
-        {% include 'parts/company-contact.part.html' %}
+        <div class="card rounded-card user-card">
+            <div class="card-block">
+                <div class="img-hover">
+                    <img class="img-fluid img-radius" src="assets\images\template\logo.png" alt="round-img">
+                </div>
+                <div class="user-content">
+                    <h4 class="text-arabic">مركز جامع حمزة</h4>
+                    <p class="m-b-0 text-muted text-arabic">فرع بيروت</p>
+                </div>
+                <div class="text-center list-group list-group-flush"
+                    style="line-height:1.5rem;margin-top:25px;font-size:2rem !important">
+                    <a href="#" class="text-primary list-group-item">
+                        <span class='text-arabic'>إدارة: منير جارودي</span>
+                        <span> <i class="fa fa-user"></i> </span>
+                    </a>
+                    <a href="#" class="text-primary list-group-item">
+                        <span>01 555 333</span>
+                        <span> <i class="fa fa-phone"></i> </span>
+                    </a>
+                    <a href="https://wa.me/96170101010" target="_blank" class=" text-success list-group-item p-1">
+                        <span>70 101010</span>
+                        <span> <i class="fa fa-whatsapp"></i> </span>
+                    </a>
+                    <a href="mailto:center@example.com" target="_blank" class=" text-muted list-group-item p-1">
+                        <span>beirut@thamara.com</span>
+                        <span> <i class="fa fa-envelope-o"></i> </span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="row container-fluid">

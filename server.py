@@ -1,13 +1,14 @@
-from flask import Flask, make_response, render_template, redirect
+from flask import Flask, make_response, render_template, redirect, Response
 import logging
 from  datetime import datetime as dt
 
 import os
 
-app = Flask(__name__,
-            static_url_path='', 
-            static_folder='templates',
-            template_folder='templates'
+app = Flask(
+    __name__,
+    static_url_path='', 
+    static_folder='templates',
+    template_folder='templates'
 )
 
 logging.basicConfig(
@@ -27,6 +28,10 @@ def home():
 @app.route("/404")
 def not_found():
     return render_template("errors/404.html")
+
+@app.route("/upload", methods=['GET', 'POST'])
+def fake_upload():
+    return Response("Done", status=200)
 
 
 
