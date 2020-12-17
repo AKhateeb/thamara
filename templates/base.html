@@ -62,31 +62,35 @@
     </head>
 
     <body>
-        {% include 'preloader.html' %}
-        <div id="pcoded" class="pcoded">
-            <div class="pcoded-overlay-box"></div>
-            <div class="pcoded-container navbar-wrapper">
 
-                {% include 'navbar.html' %}
+        {% block body %}
 
-                <div class="pcoded-main-container">
-                    <div class="pcoded-wrapper">
+            {% include 'preloader.html' %}
+            <div id="pcoded" class="pcoded">
+                <div class="pcoded-overlay-box"></div>
+                <div class="pcoded-container navbar-wrapper">
 
-                        {% include 'sidebar.html' %}
+                    {% include 'navbar.html' %}
 
-                        <div class="pcoded-content">
-                            <div class="pcoded-inner-content">
-                                <div class="main-body">
-                                    <div class="page-wrapper">
-                                        <div class="page-header">
-                                            {% block page_header %}
-                                            
-                                            {% endblock %}
-                                        </div>
-                                        <div class="page-body">
-                                            <div class="row">
-                                                {% block page_body %}
+                    <div class="pcoded-main-container">
+                        <div class="pcoded-wrapper">
+
+                            {% include 'sidebar.html' %}
+
+                            <div class="pcoded-content">
+                                <div class="pcoded-inner-content">
+                                    <div class="main-body">
+                                        <div class="page-wrapper">
+                                            <div class="page-header">
+                                                {% block page_header %}
+                                                
                                                 {% endblock %}
+                                            </div>
+                                            <div class="page-body">
+                                                <div class="row">
+                                                    {% block page_body %}
+                                                    {% endblock %}
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -96,8 +100,8 @@
                     </div>
                 </div>
             </div>
-        </div>
 
+        {% endblock %}
         <!-- Required Jquery -->
         <!-- <script data-cfasync="false" src="..\..\cdn-cgi\scripts\5c5dd728\cloudflare-sbootstrap.cstatic\email-decode.min.js"> -->
         </script>

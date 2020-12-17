@@ -1,826 +1,826 @@
 {% extends 'base.html' %}
 
-{% block page_header %}
+{% body extra_stylesheet %}
 
-    <div class="row align-items-end">
-        <div class="col-lg-8">
-            <div class="page-header-title">
-                <div class="d-inline">
-                    <h4>Thamara Services</h4>
-                    <span>list of services provided by registered companies for all Thamara users</span>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="page-header-breadcrumb">
-                <ul class="breadcrumb-title">
-                    <li class="breadcrumb-item">
-                        <a href="#"> <i class="feather icon-home"></i> </a>
-                    </li>
-                    <li class="breadcrumb-item"><a href="#!">Services</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<link rel="stylesheet" type="text/css" href="files\bower_components\slick-1.8.1\slick\slick.css">
+
+
 {% endblock %}
 
-{% block page_body %}
-<div class="row">
-    <div class="col-xl-3 col-lg-12 push-xl-9">
-        <!-- Search Box card start -->
-        <div class="card">
-            <div class="card-header">
-                <h5 class="card-header-text">Search for a service</h5>
-            </div>
-            <div class="card-block p-t-10">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="search service here...">
-                    <span class="input-group-addon" id="basic-addon1"><i class="icofont icofont-search"></i></span>
+{% block body %}
+
+    {% block page_header %}
+
+    {% endblock %}
+
+    {% block page_body %}
+    <div class="row">
+        <div class="col-xl-3 col-lg-12 push-xl-9">
+            <!-- Search Box card start -->
+            <div class="card">
+                <div class="card-header">
                 </div>
-                <div class="task-right">
-                    <div class="task-right-header-status">
-                        <span data-toggle="collapse">Top Services</span>
-                        <i class="icofont icofont-rounded-down f-right"></i>
-                    </div>
-                    <!-- end of sidebar-header completed status-->
-                    <div class="taskboard-right-progress text-right" style="display: grid;">
-                        <div>
-                            <strong class="text-danger text-arabic">مركز أهيد الطبي</strong>
-                            <h6 class="text-arabic">قلع ضرس أو سحب عصب</h6>
-                            <div class="faq-progress">
-                                <div class="progress">
-                                    <div class="faq-bar3" style="width: 80%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <hr> -->
-                        <div>
-                            <strong class="text-primary text-arabic">إطارات المحطة</strong>
-                            <h6 class="text-arabic">موازنة دواليب سيارة</h6>
-                            <div class="faq-progress">
-                                <div class="progress">
-                                    <!-- <span class="faq-text3"></span> -->
-                                    <div class="faq-bar4" style="width: 40%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <hr> -->
-                        <div>
-                            <strong class="text-success text-arabic">EVALAB</strong>
-                            <h6 class="text-arabic">اختبار السكر في الدم</h6>
-                            <div class="faq-progress">
-                                <div class="progress">
-                                    <!-- <span class="faq-text3"></span> -->
-                                    <div class="faq-bar5" style="width: 65%;"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- end of task-board-right progress -->
-                    <!-- start task right users -->
-                    <div class="task-right-header-users">
-                        <span data-toggle="collapse">Top Active Companies</span>
-                        <i class="icofont icofont-rounded-down f-right"></i>
-                    </div>
-                    <div class="user-box assign-user taskboard-right-users text-right">
-                        <div class="media">
-                            <div class="media-left media-middle photo-table">
-                                <a href="#">
-                                    <img class="media-object img-radius"
-                                        src="assets\images\companies\0{{range(1,9)| random}}.jpg" alt="Company">
-                                    <div class="live-status bg-danger"></div>
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h6 class="text-arabic"><b>إطارات المحطة</b></h6>
-                                <p class="text-arabic m-t-0">فرع بيروت</p>
-                            </div>
-                        </div>
-
-                        <div class="media">
-                            <div class="media-left media-middle photo-table">
-                                <a href="#">
-                                    <img class="media-object img-radius"
-                                        src="assets\images\companies\0{{range(1,9)| random}}.jpg" alt="Company">
-                                    <div class="live-status bg-success"></div>
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h6 class="text-arabic"><b>المخازن - صبرا</b></h6>
-                                <p class="text-arabic m-t-0">فرع بيروت</p>
-                            </div>
-                        </div>
-
-                        <div class="media">
-                            <div class="media-left media-middle photo-table">
-                                <a href="#">
-                                    <img class="media-object img-radius"
-                                        src="assets\images\companies\0{{range(1,9)| random}}.jpg" alt="Company">
-                                    <div class="live-status bg-success"></div>
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <h6 class="text-arabic"><b>مركز سيرين الطبي</b></h6>
-                                <p class="text-arabic m-t-0">فرع عرمون</p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <!-- end of task-board-right users -->
-                    <div class="task-right-header-revision">
-                        <span data-toggle="collapse">Recently Added Services</span>
-                        <i class="icofont icofont-rounded-down f-right"></i>
-                    </div>
-                    <div class="taskboard-right-revision user-box text-right">
-                        <div class="media">
-                            <div class="media-left media-middle photo-table">
-                                <a href="#">
-                                    <img class="media-object img-radius"
-                                        src="assets\images\companies\0{{range(1,9)| random}}.jpg" alt="Company">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <div class="chat-header text-arabic">تصوير أشعة سينية</div>
-                                <p class="chat-header  text-muted">4 minutes ago</p>
-                            </div>
-                            <!-- end of media body -->
-                        </div>
-                        <div class="media">
-                            <div class="media-left media-middle photo-table">
-                                <a href="#">
-                                    <img class="media-object img-radius"
-                                        src="assets\images\companies\0{{range(1,9)| random}}.jpg" alt="Company">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <div class="chat-header text-arabic">طباعة 50 صفحة أبيض وأسود</div>
-                                <p class="chat-header  text-muted">3 hours ago</p>
-                            </div>
-                            <!-- end of media body -->
-                        </div>
-                        <div class="media">
-                            <div class="media-left media-middle photo-table">
-                                <a href="#">
-                                    <img class="media-object img-radius"
-                                        src="assets\images\companies\0{{range(1,9)| random}}.jpg" alt="Company">
-                                </a>
-                            </div>
-                            <div class="media-body">
-                                <div class="chat-header text-arabic">مواد غذائية حسم 20 بالمئة</div>
-                                <p class="chat-header  text-muted">2 days ago</p>
-                            </div>
-                            <!-- end of media body -->
-                        </div>
-                    </div>
-                    <!-- end of task-right-revision -->
+                <div class="card-block p-t-10">
+                <div class="img-hover">
+                    <img class="img-fluid img-radius" src="assets\images\template\logo.png" alt="round-img">
                 </div>
-                <!-- end of sidebar-right -->
+                <br>
+                    <h5 class="card-header-text m-b-10">Search for a service</h5>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="search service here...">
+                        <span class="input-group-addon" id="basic-addon1"><i class="icofont icofont-search"></i></span>
+                    </div>
+                    <div class="task-right">
+                        <div class="task-right-header-status">
+                            <span data-toggle="collapse">Top Services</span>
+                            <i class="icofont icofont-rounded-down f-right"></i>
+                        </div>
+                        <!-- end of sidebar-header completed status-->
+                        <div class="taskboard-right-progress text-right" style="display: grid;">
+                            <div>
+                                <strong class="text-danger text-arabic">مركز أهيد الطبي</strong>
+                                <h6 class="text-arabic">قلع ضرس أو سحب عصب</h6>
+                                <div class="faq-progress">
+                                    <div class="progress">
+                                        <div class="faq-bar3" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <hr> -->
+                            <div>
+                                <strong class="text-primary text-arabic">إطارات المحطة</strong>
+                                <h6 class="text-arabic">موازنة دواليب سيارة</h6>
+                                <div class="faq-progress">
+                                    <div class="progress">
+                                        <!-- <span class="faq-text3"></span> -->
+                                        <div class="faq-bar4" style="width: 40%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <hr> -->
+                            <div>
+                                <strong class="text-success text-arabic">EVALAB</strong>
+                                <h6 class="text-arabic">اختبار السكر في الدم</h6>
+                                <div class="faq-progress">
+                                    <div class="progress">
+                                        <!-- <span class="faq-text3"></span> -->
+                                        <div class="faq-bar5" style="width: 65%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end of task-board-right progress -->
+                        <!-- start task right users -->
+                        <div class="task-right-header-users">
+                            <span data-toggle="collapse">Top Active Companies</span>
+                            <i class="icofont icofont-rounded-down f-right"></i>
+                        </div>
+                        <div class="user-box assign-user taskboard-right-users text-right">
+                            <div class="media">
+                                <div class="media-left media-middle photo-table">
+                                    <a href="#">
+                                        <img class="media-object img-radius"
+                                            src="assets\images\companies\0{{range(1,9)| random}}.jpg" alt="Company">
+                                        <div class="live-status bg-danger"></div>
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="text-arabic"><b>إطارات المحطة</b></h6>
+                                    <p class="text-arabic m-t-0">فرع بيروت</p>
+                                </div>
+                            </div>
+
+                            <div class="media">
+                                <div class="media-left media-middle photo-table">
+                                    <a href="#">
+                                        <img class="media-object img-radius"
+                                            src="assets\images\companies\0{{range(1,9)| random}}.jpg" alt="Company">
+                                        <div class="live-status bg-success"></div>
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="text-arabic"><b>المخازن - صبرا</b></h6>
+                                    <p class="text-arabic m-t-0">فرع بيروت</p>
+                                </div>
+                            </div>
+
+                            <div class="media">
+                                <div class="media-left media-middle photo-table">
+                                    <a href="#">
+                                        <img class="media-object img-radius"
+                                            src="assets\images\companies\0{{range(1,9)| random}}.jpg" alt="Company">
+                                        <div class="live-status bg-success"></div>
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <h6 class="text-arabic"><b>مركز سيرين الطبي</b></h6>
+                                    <p class="text-arabic m-t-0">فرع عرمون</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end of task-board-right users -->
+                        <div class="task-right-header-revision">
+                            <span data-toggle="collapse">Recently Added Services</span>
+                            <i class="icofont icofont-rounded-down f-right"></i>
+                        </div>
+                        <div class="taskboard-right-revision user-box text-right">
+                            <div class="media">
+                                <div class="media-left media-middle photo-table">
+                                    <a href="#">
+                                        <img class="media-object img-radius"
+                                            src="assets\images\companies\0{{range(1,9)| random}}.jpg" alt="Company">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <div class="chat-header text-arabic">تصوير أشعة سينية</div>
+                                    <p class="chat-header  text-muted">4 minutes ago</p>
+                                </div>
+                                <!-- end of media body -->
+                            </div>
+                            <div class="media">
+                                <div class="media-left media-middle photo-table">
+                                    <a href="#">
+                                        <img class="media-object img-radius"
+                                            src="assets\images\companies\0{{range(1,9)| random}}.jpg" alt="Company">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <div class="chat-header text-arabic">طباعة 50 صفحة أبيض وأسود</div>
+                                    <p class="chat-header  text-muted">3 hours ago</p>
+                                </div>
+                                <!-- end of media body -->
+                            </div>
+                            <div class="media">
+                                <div class="media-left media-middle photo-table">
+                                    <a href="#">
+                                        <img class="media-object img-radius"
+                                            src="assets\images\companies\0{{range(1,9)| random}}.jpg" alt="Company">
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <div class="chat-header text-arabic">مواد غذائية حسم 20 بالمئة</div>
+                                    <p class="chat-header  text-muted">2 days ago</p>
+                                </div>
+                                <!-- end of media body -->
+                            </div>
+                        </div>
+                        <!-- end of task-right-revision -->
+                    </div>
+                    <!-- end of sidebar-right -->
+                </div>
+                <!-- end of card-block -->
             </div>
-            <!-- end of card-block -->
+            <!-- Search Box card end -->
         </div>
-        <!-- Search Box card end -->
-    </div>
-    <div class="col-xl-9 col-lg-12 pull-xl-3 filter-bar">
-        <!-- Navigation start -->
-        <nav class="navbar navbar-light bg-faded m-b-30 p-10">
-            <ul class="nav navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#!">Filter: <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#!" id="by_expiration_date" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-clock-time"></i> By
-                        Expiration Date</a>
-                    <div class="dropdown-menu" aria-labelledby="by_expiration_date">
-                        <a class="dropdown-item" href="#!">Show all</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#!">This week</a>
-                        <a class="dropdown-item" href="#!">This month</a>
-                        <a class="dropdown-item" href="#!">in 6 months</a>
-                        <a class="dropdown-item" href="#!">in a year</a>
-                    </div>
-                </li>
-                <!-- end of by date dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#!" id="by_domain" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-chart-histogram-alt"></i>
-                        By Domain</a>
-                    <div class="dropdown-menu" aria-labelledby="by_domain">
-                        <a class="dropdown-item" href="#!">Show all</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-arabic" href="#!">ملابس</a>
-                        <a class="dropdown-item text-arabic" href="#!">مأكولات</a>
-                        <a class="dropdown-item text-arabic" href="#!">عيادات نسائية</a>
-                        <a class="dropdown-item text-arabic" href="#!">مختبرات طبية</a>
-                        <a class="dropdown-item text-arabic" href="#!">ألعاب أطفال</a>
-                        <a class="dropdown-item text-arabic" href="#!">ميكانيك ومحركات</a>
-                        <a class="dropdown-item text-arabic" href="#!">خدمات مالية</a>
-                        <a class="dropdown-item text-arabic" href="#!">تعليم وتدريب</a>
-                        <a class="dropdown-item text-arabic" href="#!">سوبر ماركت</a>
-                    </div>
-                </li>
-                <!-- end of by status dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#!" id="by_subcategory" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-sub-listing"></i> By
-                        Category</a>
-                    <div class="dropdown-menu" aria-labelledby="by_subcategory">
-                        <a class="dropdown-item text-arabic" href="#!">Show all</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-arabic" href="#!">معجنات</a>
-                        <a class="dropdown-item text-arabic" href="#!">لحوم</a>
-                        <a class="dropdown-item text-arabic" href="#!">مثلجات</a>
-                        <a class="dropdown-item text-arabic" href="#!">ألبسة اطفال</a>
-                        <a class="dropdown-item text-arabic" href="#!">ألبسة رجالي</a>
-                        <a class="dropdown-item text-arabic" href="#!">تجهيزات رياضية</a>
-                        <a class="dropdown-item text-arabic" href="#!">تدريس ابتدائي</a>
-                        <a class="dropdown-item text-arabic" href="#!">سجاد</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#!" id="by_company" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-building-alt"></i> By
-                        Company</a>
-                    <div class="dropdown-menu" aria-labelledby="by_company">
-                        <a class="dropdown-item text-arabic" href="#!">Show all</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-arabic" href="#!">مركز أهيد الطبي</a>
-                        <a class="dropdown-item text-arabic" href="#!">مناقيش الجلاء</a>
-                        <a class="dropdown-item text-arabic" href="#!">بوظة الهواري</a>
-                        <a class="dropdown-item text-arabic" href="#!">SINNO STYLE</a>
-                        <a class="dropdown-item text-arabic" href="#!">سوبر ماركت أولمرت</a>
-                        <a class="dropdown-item text-arabic" href="#!">سوبر ماركت المخازن</a>
-                    </div>
-                </li>
-            </ul>
-            <!-- end of by priority dropdown -->
+        <div class="col-xl-9 col-lg-12 pull-xl-3 filter-bar">
+            <!-- Navigation start -->
+            <nav class="navbar navbar-light bg-faded m-t-10 m-b-15 p-10">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#!">Filter: <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#!" id="by_expiration_date" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-clock-time"></i> By
+                            Expiration Date</a>
+                        <div class="dropdown-menu" aria-labelledby="by_expiration_date">
+                            <a class="dropdown-item" href="#!">Show all</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#!">This week</a>
+                            <a class="dropdown-item" href="#!">This month</a>
+                            <a class="dropdown-item" href="#!">in 6 months</a>
+                            <a class="dropdown-item" href="#!">in a year</a>
+                        </div>
+                    </li>
+                    <!-- end of by date dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#!" id="by_domain" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-chart-histogram-alt"></i>
+                            By Domain</a>
+                        <div class="dropdown-menu" aria-labelledby="by_domain">
+                            <a class="dropdown-item" href="#!">Show all</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-arabic" href="#!">ملابس</a>
+                            <a class="dropdown-item text-arabic" href="#!">مأكولات</a>
+                            <a class="dropdown-item text-arabic" href="#!">عيادات نسائية</a>
+                            <a class="dropdown-item text-arabic" href="#!">مختبرات طبية</a>
+                            <a class="dropdown-item text-arabic" href="#!">ألعاب أطفال</a>
+                            <a class="dropdown-item text-arabic" href="#!">ميكانيك ومحركات</a>
+                            <a class="dropdown-item text-arabic" href="#!">خدمات مالية</a>
+                            <a class="dropdown-item text-arabic" href="#!">تعليم وتدريب</a>
+                            <a class="dropdown-item text-arabic" href="#!">سوبر ماركت</a>
+                        </div>
+                    </li>
+                    <!-- end of by status dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#!" id="by_subcategory" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-sub-listing"></i> By
+                            Category</a>
+                        <div class="dropdown-menu" aria-labelledby="by_subcategory">
+                            <a class="dropdown-item text-arabic" href="#!">Show all</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-arabic" href="#!">معجنات</a>
+                            <a class="dropdown-item text-arabic" href="#!">لحوم</a>
+                            <a class="dropdown-item text-arabic" href="#!">مثلجات</a>
+                            <a class="dropdown-item text-arabic" href="#!">ألبسة اطفال</a>
+                            <a class="dropdown-item text-arabic" href="#!">ألبسة رجالي</a>
+                            <a class="dropdown-item text-arabic" href="#!">تجهيزات رياضية</a>
+                            <a class="dropdown-item text-arabic" href="#!">تدريس ابتدائي</a>
+                            <a class="dropdown-item text-arabic" href="#!">سجاد</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#!" id="by_company" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"><i class="icofont icofont-building-alt"></i> By
+                            Company</a>
+                        <div class="dropdown-menu" aria-labelledby="by_company">
+                            <a class="dropdown-item text-arabic" href="#!">Show all</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-arabic" href="#!">مركز أهيد الطبي</a>
+                            <a class="dropdown-item text-arabic" href="#!">مناقيش الجلاء</a>
+                            <a class="dropdown-item text-arabic" href="#!">بوظة الهواري</a>
+                            <a class="dropdown-item text-arabic" href="#!">SINNO STYLE</a>
+                            <a class="dropdown-item text-arabic" href="#!">سوبر ماركت أولمرت</a>
+                            <a class="dropdown-item text-arabic" href="#!">سوبر ماركت المخازن</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- end of by priority dropdown -->
 
-        </nav>
-        <!-- Navigation end  -->
-        <div class="row">
-            <!-- Service list card start -->
-            <div class="col-sm-6">
-                <div class="card card-border-primary">
-                    <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
-
-                    <div class="card-header">
-                        <h5 class="text-arabic">اسم الخدمة هنا </h5>
-                        <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
-                        <div class="dropdown-secondary dropdown f-right">
-                            <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light"
-                                type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">Active</button>
-                            <div class="dropdown-menu" aria-labelledby="dropdown1" data-dropdown-in="fadeIn"
-                                data-dropdown-out="fadeOut">
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-danger"></span>Pending</a>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-warning"></span>Expired</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-info"></span>Canceled</a>
-                            </div>
-                            <!-- end of dropdown menu -->
-                            <span class="f-left m-r-5 text-inverse">Status : </span>
-                        </div>
-                    </div>
-                    <div class="card-block text-right">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled">
-                                    <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled text-right">
-                                    <h4>75,000 L.L</h4>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="task-list-table">
-                            <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
-                        </div>
-                        <div class="task-board m-0">
-                            <!-- end of dropdown-secondary -->
-                            <div class="dropdown-secondary dropdown">
-                                <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
-                                    type="button" id="dropdown14" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
-                                <div class="dropdown-menu" aria-labelledby="dropdown14" data-dropdown-in="fadeIn"
-                                    data-dropdown-out="fadeOut">
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-print"></i> Print Service Statistics</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-edit"></i> Edit Service</a>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-delete"></i> Remove Service</a>
-                                </div>
-                                <!-- end of dropdown menu -->
-                            </div>
-                            <!-- end of seconadary -->
-                        </div>
-                        <!-- end of pull-right class -->
-                    </div>
-                    <!-- end of card-footer -->
-                </div>
-            </div>
-            <!-- Service list card end -->
-            <!-- Service list card start -->
-            <div class="col-sm-6">
-                <div class="card card-border-primary">
-                    <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
-
-                    <div class="card-header">
-                        <h5 class="text-arabic">اسم الخدمة هنا </h5>
-                        <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
-                        <div class="dropdown-secondary dropdown f-right">
-                            <button class="btn btn-warning btn-mini dropdown-toggle waves-effect waves-light"
-                                type="button" id="dropdown6" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">Pending</button>
-                            <div class="dropdown-menu" aria-labelledby="dropdown6" data-dropdown-in="fadeIn"
-                                data-dropdown-out="fadeOut">
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-danger"></span>Active</a>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-warning"></span>Expired</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-info"></span>Canceled</a>
-                            </div>
-                            <!-- end of dropdown menu -->
-                            <span class="f-left m-r-5 text-inverse">Status : </span>
-                        </div>
-                    </div>
-                    <div class="card-block text-right">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled">
-                                    <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled text-right">
-                                    <h4>75,000 L.L</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="task-list-table">
-                            <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
-                        </div>
-                        <div class="task-board m-0">
-                            <!-- end of dropdown-secondary -->
-                            <div class="dropdown-secondary dropdown">
-                                <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
-                                    type="button" id="dropdown3" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
-                                <div class="dropdown-menu" aria-labelledby="dropdown3" data-dropdown-in="fadeIn"
-                                    data-dropdown-out="fadeOut">
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-print"></i> Print Service Statistics</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-edit"></i> Edit Service</a>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-delete"></i> Remove Service</a>
-                                </div>
-                                <!-- end of dropdown menu -->
-                            </div>
-                            <!-- end of seconadary -->
-                        </div>
-                        <!-- end of pull-right class -->
-                    </div>
-                    <!-- end of card-footer -->
-                </div>
-            </div>
-            <!-- Service list card end -->
-            <div class="col-sm-6">
+            </nav>
+            <!-- Navigation end  -->
+            <div class="row">
                 <!-- Service list card start -->
-                <div class="card card-border-primary">
-                    <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
+                <div class="col-sm-6">
+                    <div class="card card-border-primary">
+                        <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
 
-                    <div class="card-header">
-                        <h5 class="text-arabic">اسم الخدمة هنا </h5>
-                        <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
-                        <div class="dropdown-secondary dropdown f-right">
-                            <button class="btn btn-warning btn-mini dropdown-toggle waves-effect waves-light"
-                                type="button" id="dropdown12" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">Pending</button>
-                            <div class="dropdown-menu" aria-labelledby="dropdown12" data-dropdown-in="fadeIn"
-                                data-dropdown-out="fadeOut">
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-danger"></span>Active</a>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-warning"></span>Expired</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-info"></span>Canceled</a>
-                            </div>
-                            <!-- end of dropdown menu -->
-                            <span class="f-left m-r-5 text-inverse">Status : </span>
-                        </div>
-                    </div>
-                    <div class="card-block text-right">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled">
-                                    <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled text-right">
-                                    <h4>75,000 L.L</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="task-list-table">
-                            <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
-                        </div>
-                        <div class="task-board m-0">
-                            <!-- end of dropdown-secondary -->
-                            <div class="dropdown-secondary dropdown">
-                                <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
-                                    type="button" id="dropdown8" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
-                                <div class="dropdown-menu" aria-labelledby="dropdown8" data-dropdown-in="fadeIn"
+                        <div class="card-header">
+                            <h5 class="text-arabic">اسم الخدمة هنا </h5>
+                            <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
+                            <div class="dropdown-secondary dropdown f-right">
+                                <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light"
+                                    type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">Active</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdown1" data-dropdown-in="fadeIn"
                                     data-dropdown-out="fadeOut">
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-print"></i> Print Service Statistics</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-danger"></span>Pending</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-warning"></span>Expired</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-edit"></i> Edit Service</a>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-info"></span>Canceled</a>
                                 </div>
                                 <!-- end of dropdown menu -->
+                                <span class="f-left m-r-5 text-inverse">Status : </span>
                             </div>
-                            <!-- end of seconadary -->
                         </div>
-                        <!-- end of pull-right class -->
+                        <div class="card-block text-right">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled">
+                                        <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled text-right">
+                                        <h4>75,000 L.L</h4>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="task-list-table">
+                                <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
+                            </div>
+                            <div class="task-board m-0">
+                                <!-- end of dropdown-secondary -->
+                                <div class="dropdown-secondary dropdown">
+                                    <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
+                                        type="button" id="dropdown14" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown14" data-dropdown-in="fadeIn"
+                                        data-dropdown-out="fadeOut">
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-print"></i> Print Service Statistics</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-edit"></i> Edit Service</a>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    </div>
+                                    <!-- end of dropdown menu -->
+                                </div>
+                                <!-- end of seconadary -->
+                            </div>
+                            <!-- end of pull-right class -->
+                        </div>
+                        <!-- end of card-footer -->
                     </div>
-                    <!-- end of card-footer -->
                 </div>
                 <!-- Service list card end -->
-            </div>
-            <div class="col-sm-6">
                 <!-- Service list card start -->
-                <div class="card card-border-primary">
-                    <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
+                <div class="col-sm-6">
+                    <div class="card card-border-primary">
+                        <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
 
-                    <div class="card-header">
-                        <h5 class="text-arabic">اسم الخدمة هنا </h5>
-                        <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
-                        <div class="dropdown-secondary dropdown f-right">
-                            <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light"
-                                type="button" id="dropdown4" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">Active</button>
-                            <div class="dropdown-menu" aria-labelledby="dropdown4" data-dropdown-in="fadeIn"
-                                data-dropdown-out="fadeOut">
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-danger"></span>Pending</a>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-warning"></span>Expired</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-info"></span>Canceled</a>
-                            </div>
-                            <!-- end of dropdown menu -->
-                            <span class="f-left m-r-5 text-inverse">Status : </span>
-                        </div>
-                    </div>
-                    <div class="card-block text-right">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled">
-                                    <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled text-right">
-                                    <h4>75,000 L.L</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="task-list-table">
-                            <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
-                        </div>
-                        <div class="task-board m-0">
-                            <!-- end of dropdown-secondary -->
-                            <div class="dropdown-secondary dropdown">
-                                <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
-                                    type="button" id="dropdown16" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
-                                <div class="dropdown-menu" aria-labelledby="dropdown16" data-dropdown-in="fadeIn"
+                        <div class="card-header">
+                            <h5 class="text-arabic">اسم الخدمة هنا </h5>
+                            <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
+                            <div class="dropdown-secondary dropdown f-right">
+                                <button class="btn btn-warning btn-mini dropdown-toggle waves-effect waves-light"
+                                    type="button" id="dropdown6" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">Pending</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdown6" data-dropdown-in="fadeIn"
                                     data-dropdown-out="fadeOut">
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-print"></i> Print Service Statistics</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-danger"></span>Active</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-warning"></span>Expired</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-edit"></i> Edit Service</a>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-info"></span>Canceled</a>
                                 </div>
                                 <!-- end of dropdown menu -->
+                                <span class="f-left m-r-5 text-inverse">Status : </span>
                             </div>
-                            <!-- end of seconadary -->
                         </div>
-                        <!-- end of pull-right class -->
+                        <div class="card-block text-right">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled">
+                                        <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled text-right">
+                                        <h4>75,000 L.L</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="task-list-table">
+                                <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
+                            </div>
+                            <div class="task-board m-0">
+                                <!-- end of dropdown-secondary -->
+                                <div class="dropdown-secondary dropdown">
+                                    <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
+                                        type="button" id="dropdown3" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown3" data-dropdown-in="fadeIn"
+                                        data-dropdown-out="fadeOut">
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-print"></i> Print Service Statistics</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-edit"></i> Edit Service</a>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    </div>
+                                    <!-- end of dropdown menu -->
+                                </div>
+                                <!-- end of seconadary -->
+                            </div>
+                            <!-- end of pull-right class -->
+                        </div>
+                        <!-- end of card-footer -->
                     </div>
-                    <!-- end of card-footer -->
                 </div>
                 <!-- Service list card end -->
-            </div>
-            <div class="col-sm-6">
-                <!-- Service list card start -->
-                <div class="card card-border-primary">
-                    <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
+                <div class="col-sm-6">
+                    <!-- Service list card start -->
+                    <div class="card card-border-primary">
+                        <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
 
-                    <div class="card-header">
-                        <h5 class="text-arabic">اسم الخدمة هنا </h5>
-                        <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
-                        <div class="dropdown-secondary dropdown f-right">
-                            <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light"
-                                type="button" id="dropdown2" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">Active</button>
-                            <div class="dropdown-menu" aria-labelledby="dropdown2" data-dropdown-in="fadeIn"
-                                data-dropdown-out="fadeOut">
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-danger"></span>Pending</a>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-warning"></span>Expired</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-info"></span>Canceled</a>
-                            </div>
-                            <!-- end of dropdown menu -->
-                            <span class="f-left m-r-5 text-inverse">Status : </span>
-                        </div>
-                    </div>
-                    <div class="card-block text-right">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled">
-                                    <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled text-right">
-                                    <h4>75,000 L.L</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="task-list-table">
-                            <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
-                        </div>
-                        <div class="task-board m-0">
-                            <!-- end of dropdown-secondary -->
-                            <div class="dropdown-secondary dropdown">
-                                <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
-                                    type="button" id="dropdown9" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
-                                <div class="dropdown-menu" aria-labelledby="dropdown9" data-dropdown-in="fadeIn"
+                        <div class="card-header">
+                            <h5 class="text-arabic">اسم الخدمة هنا </h5>
+                            <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
+                            <div class="dropdown-secondary dropdown f-right">
+                                <button class="btn btn-warning btn-mini dropdown-toggle waves-effect waves-light"
+                                    type="button" id="dropdown12" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">Pending</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdown12" data-dropdown-in="fadeIn"
                                     data-dropdown-out="fadeOut">
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-print"></i> Print Service Statistics</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-danger"></span>Active</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-warning"></span>Expired</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-edit"></i> Edit Service</a>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-info"></span>Canceled</a>
                                 </div>
                                 <!-- end of dropdown menu -->
+                                <span class="f-left m-r-5 text-inverse">Status : </span>
                             </div>
-                            <!-- end of seconadary -->
                         </div>
-                        <!-- end of pull-right class -->
+                        <div class="card-block text-right">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled">
+                                        <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled text-right">
+                                        <h4>75,000 L.L</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="task-list-table">
+                                <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
+                            </div>
+                            <div class="task-board m-0">
+                                <!-- end of dropdown-secondary -->
+                                <div class="dropdown-secondary dropdown">
+                                    <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
+                                        type="button" id="dropdown8" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown8" data-dropdown-in="fadeIn"
+                                        data-dropdown-out="fadeOut">
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-print"></i> Print Service Statistics</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-edit"></i> Edit Service</a>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    </div>
+                                    <!-- end of dropdown menu -->
+                                </div>
+                                <!-- end of seconadary -->
+                            </div>
+                            <!-- end of pull-right class -->
+                        </div>
+                        <!-- end of card-footer -->
                     </div>
-                    <!-- end of card-footer -->
+                    <!-- Service list card end -->
                 </div>
-                <!-- Service list card end -->
-            </div>
-            <div class="col-sm-6">
-                <!-- Service list card start -->
-                <div class="card card-border-primary">
-                    <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
+                <div class="col-sm-6">
+                    <!-- Service list card start -->
+                    <div class="card card-border-primary">
+                        <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
 
-                    <div class="card-header">
-                        <h5 class="text-arabic">اسم الخدمة هنا </h5>
-                        <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
-                        <div class="dropdown-secondary dropdown f-right">
-                            <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light"
-                                type="button" id="dropdown13" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">Active</button>
-                            <div class="dropdown-menu" aria-labelledby="dropdown13" data-dropdown-in="fadeIn"
-                                data-dropdown-out="fadeOut">
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-danger"></span>Pending</a>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-warning"></span>Expired</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-info"></span>Canceled</a>
-                            </div>
-                            <!-- end of dropdown menu -->
-                            <span class="f-left m-r-5 text-inverse">Status : </span>
-                        </div>
-                    </div>
-                    <div class="card-block text-right">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled">
-                                    <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled text-right">
-                                    <h4>75,000 L.L</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="task-list-table">
-                            <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
-                        </div>
-                        <div class="task-board m-0">
-                            <!-- end of dropdown-secondary -->
-                            <div class="dropdown-secondary dropdown">
-                                <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
-                                    type="button" id="dropdown10" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
-                                <div class="dropdown-menu" aria-labelledby="dropdown10" data-dropdown-in="fadeIn"
+                        <div class="card-header">
+                            <h5 class="text-arabic">اسم الخدمة هنا </h5>
+                            <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
+                            <div class="dropdown-secondary dropdown f-right">
+                                <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light"
+                                    type="button" id="dropdown4" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">Active</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdown4" data-dropdown-in="fadeIn"
                                     data-dropdown-out="fadeOut">
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-print"></i> Print Service Statistics</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-danger"></span>Pending</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-warning"></span>Expired</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-edit"></i> Edit Service</a>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-info"></span>Canceled</a>
                                 </div>
                                 <!-- end of dropdown menu -->
+                                <span class="f-left m-r-5 text-inverse">Status : </span>
                             </div>
-                            <!-- end of seconadary -->
                         </div>
-                        <!-- end of pull-right class -->
+                        <div class="card-block text-right">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled">
+                                        <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled text-right">
+                                        <h4>75,000 L.L</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="task-list-table">
+                                <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
+                            </div>
+                            <div class="task-board m-0">
+                                <!-- end of dropdown-secondary -->
+                                <div class="dropdown-secondary dropdown">
+                                    <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
+                                        type="button" id="dropdown16" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown16" data-dropdown-in="fadeIn"
+                                        data-dropdown-out="fadeOut">
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-print"></i> Print Service Statistics</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-edit"></i> Edit Service</a>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    </div>
+                                    <!-- end of dropdown menu -->
+                                </div>
+                                <!-- end of seconadary -->
+                            </div>
+                            <!-- end of pull-right class -->
+                        </div>
+                        <!-- end of card-footer -->
                     </div>
-                    <!-- end of card-footer -->
+                    <!-- Service list card end -->
                 </div>
-                <!-- Service list card end -->
-            </div>
-            <div class="col-sm-6">
-                <!-- Service list card start -->
-                <div class="card card-border-primary">
-                    <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
+                <div class="col-sm-6">
+                    <!-- Service list card start -->
+                    <div class="card card-border-primary">
+                        <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
 
-                    <div class="card-header">
-                        <h5 class="text-arabic">اسم الخدمة هنا </h5>
-                        <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
-                        <div class="dropdown-secondary dropdown f-right">
-                            <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light"
-                                type="button" id="dropdown7" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">Active</button>
-                            <div class="dropdown-menu" aria-labelledby="dropdown7" data-dropdown-in="fadeIn"
-                                data-dropdown-out="fadeOut">
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-danger"></span>Pending</a>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-warning"></span>Expired</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-info"></span>Canceled</a>
-                            </div>
-                            <!-- end of dropdown menu -->
-                            <span class="f-left m-r-5 text-inverse">Status : </span>
-                        </div>
-                    </div>
-                    <div class="card-block text-right">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled">
-                                    <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled text-right">
-                                    <h4>75,000 L.L</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="task-list-table">
-                            <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
-                        </div>
-                        <div class="task-board m-0">
-                            <!-- end of dropdown-secondary -->
-                            <div class="dropdown-secondary dropdown">
-                                <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
-                                    type="button" id="dropdown15" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
-                                <div class="dropdown-menu" aria-labelledby="dropdown15" data-dropdown-in="fadeIn"
+                        <div class="card-header">
+                            <h5 class="text-arabic">اسم الخدمة هنا </h5>
+                            <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
+                            <div class="dropdown-secondary dropdown f-right">
+                                <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light"
+                                    type="button" id="dropdown2" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">Active</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdown2" data-dropdown-in="fadeIn"
                                     data-dropdown-out="fadeOut">
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-print"></i> Print Service Statistics</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-danger"></span>Pending</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-warning"></span>Expired</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-edit"></i> Edit Service</a>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-info"></span>Canceled</a>
                                 </div>
                                 <!-- end of dropdown menu -->
+                                <span class="f-left m-r-5 text-inverse">Status : </span>
                             </div>
-                            <!-- end of seconadary -->
                         </div>
-                        <!-- end of pull-right class -->
+                        <div class="card-block text-right">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled">
+                                        <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled text-right">
+                                        <h4>75,000 L.L</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="task-list-table">
+                                <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
+                            </div>
+                            <div class="task-board m-0">
+                                <!-- end of dropdown-secondary -->
+                                <div class="dropdown-secondary dropdown">
+                                    <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
+                                        type="button" id="dropdown9" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown9" data-dropdown-in="fadeIn"
+                                        data-dropdown-out="fadeOut">
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-print"></i> Print Service Statistics</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-edit"></i> Edit Service</a>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    </div>
+                                    <!-- end of dropdown menu -->
+                                </div>
+                                <!-- end of seconadary -->
+                            </div>
+                            <!-- end of pull-right class -->
+                        </div>
+                        <!-- end of card-footer -->
                     </div>
-                    <!-- end of card-footer -->
+                    <!-- Service list card end -->
                 </div>
-                <!-- Service list card end -->
-            </div>
-            <div class="col-sm-6">
-                <!-- Service list card start -->
-                <div class="card card-border-primary">
-                    <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
+                <div class="col-sm-6">
+                    <!-- Service list card start -->
+                    <div class="card card-border-primary">
+                        <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
 
-                    <div class="card-header">
-                        <h5 class="text-arabic">اسم الخدمة هنا </h5>
-                        <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
-                        <div class="dropdown-secondary dropdown f-right">
-                            <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light"
-                                type="button" id="dropdown5" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">Active</button>
-                            <div class="dropdown-menu" aria-labelledby="dropdown5" data-dropdown-in="fadeIn"
-                                data-dropdown-out="fadeOut">
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-danger"></span>Pending</a>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-warning"></span>Expired</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item waves-light waves-effect" href="#!"><span
-                                        class="point-marker bg-info"></span>Canceled</a>
-                            </div>
-                            <!-- end of dropdown menu -->
-                            <span class="f-left m-r-5 text-inverse">Status : </span>
-                        </div>
-                    </div>
-                    <div class="card-block text-right">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled">
-                                    <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="list list-unstyled text-right">
-                                    <h4>75,000 L.L</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="task-list-table">
-                            <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
-                        </div>
-                        <div class="task-board m-0">
-                            <!-- end of dropdown-secondary -->
-                            <div class="dropdown-secondary dropdown">
-                                <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
-                                    type="button" id="dropdown11" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
-                                <div class="dropdown-menu" aria-labelledby="dropdown11" data-dropdown-in="fadeIn"
+                        <div class="card-header">
+                            <h5 class="text-arabic">اسم الخدمة هنا </h5>
+                            <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
+                            <div class="dropdown-secondary dropdown f-right">
+                                <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light"
+                                    type="button" id="dropdown13" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">Active</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdown13" data-dropdown-in="fadeIn"
                                     data-dropdown-out="fadeOut">
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-print"></i> Print Service Statistics</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-danger"></span>Pending</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-warning"></span>Expired</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-edit"></i> Edit Service</a>
-                                    <a class="dropdown-item waves-light waves-effect" href="#!"><i
-                                            class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-info"></span>Canceled</a>
                                 </div>
                                 <!-- end of dropdown menu -->
+                                <span class="f-left m-r-5 text-inverse">Status : </span>
                             </div>
-                            <!-- end of seconadary -->
                         </div>
-                        <!-- end of pull-right class -->
+                        <div class="card-block text-right">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled">
+                                        <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled text-right">
+                                        <h4>75,000 L.L</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="task-list-table">
+                                <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
+                            </div>
+                            <div class="task-board m-0">
+                                <!-- end of dropdown-secondary -->
+                                <div class="dropdown-secondary dropdown">
+                                    <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
+                                        type="button" id="dropdown10" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown10" data-dropdown-in="fadeIn"
+                                        data-dropdown-out="fadeOut">
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-print"></i> Print Service Statistics</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-edit"></i> Edit Service</a>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    </div>
+                                    <!-- end of dropdown menu -->
+                                </div>
+                                <!-- end of seconadary -->
+                            </div>
+                            <!-- end of pull-right class -->
+                        </div>
+                        <!-- end of card-footer -->
                     </div>
-                    <!-- end of card-footer -->
+                    <!-- Service list card end -->
                 </div>
-                <!-- Service list card end -->
+                <div class="col-sm-6">
+                    <!-- Service list card start -->
+                    <div class="card card-border-primary">
+                        <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
+
+                        <div class="card-header">
+                            <h5 class="text-arabic">اسم الخدمة هنا </h5>
+                            <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
+                            <div class="dropdown-secondary dropdown f-right">
+                                <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light"
+                                    type="button" id="dropdown7" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">Active</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdown7" data-dropdown-in="fadeIn"
+                                    data-dropdown-out="fadeOut">
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-danger"></span>Pending</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-warning"></span>Expired</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-info"></span>Canceled</a>
+                                </div>
+                                <!-- end of dropdown menu -->
+                                <span class="f-left m-r-5 text-inverse">Status : </span>
+                            </div>
+                        </div>
+                        <div class="card-block text-right">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled">
+                                        <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled text-right">
+                                        <h4>75,000 L.L</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="task-list-table">
+                                <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
+                            </div>
+                            <div class="task-board m-0">
+                                <!-- end of dropdown-secondary -->
+                                <div class="dropdown-secondary dropdown">
+                                    <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
+                                        type="button" id="dropdown15" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown15" data-dropdown-in="fadeIn"
+                                        data-dropdown-out="fadeOut">
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-print"></i> Print Service Statistics</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-edit"></i> Edit Service</a>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    </div>
+                                    <!-- end of dropdown menu -->
+                                </div>
+                                <!-- end of seconadary -->
+                            </div>
+                            <!-- end of pull-right class -->
+                        </div>
+                        <!-- end of card-footer -->
+                    </div>
+                    <!-- Service list card end -->
+                </div>
+                <div class="col-sm-6">
+                    <!-- Service list card start -->
+                    <div class="card card-border-primary">
+                        <img height="200" class="profile-bg-img img-fluid" src="..\files\assets\images\user-profile\bg-img1.jpg" alt="bg-img">
+
+                        <div class="card-header">
+                            <h5 class="text-arabic">اسم الخدمة هنا </h5>
+                            <!-- <span class="label label-default f-right"> 28 January, 2015 </span> -->
+                            <div class="dropdown-secondary dropdown f-right">
+                                <button class="btn btn-success btn-mini dropdown-toggle waves-effect waves-light"
+                                    type="button" id="dropdown5" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">Active</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdown5" data-dropdown-in="fadeIn"
+                                    data-dropdown-out="fadeOut">
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-danger"></span>Pending</a>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-warning"></span>Expired</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item waves-light waves-effect" href="#!"><span
+                                            class="point-marker bg-info"></span>Canceled</a>
+                                </div>
+                                <!-- end of dropdown menu -->
+                                <span class="f-left m-r-5 text-inverse">Status : </span>
+                            </div>
+                        </div>
+                        <div class="card-block text-right">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled">
+                                        <li class="text-arabic">هنا وصف الخدمة، التي توضح كيفية الاستفادة منها</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list list-unstyled text-right">
+                                        <h4>75,000 L.L</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="task-list-table">
+                                <p class="task-due"><strong> Due : </strong><strong >215 days</strong></p>
+                            </div>
+                            <div class="task-board m-0">
+                                <!-- end of dropdown-secondary -->
+                                <div class="dropdown-secondary dropdown">
+                                    <button class="btn btn-info btn-mini dropdown-toggle waves-light b-none txt-muted"
+                                        type="button" id="dropdown11" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false"><i class="icofont icofont-navigation-menu"></i></button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown11" data-dropdown-in="fadeIn"
+                                        data-dropdown-out="fadeOut">
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-print"></i> Print Service Statistics</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-edit"></i> Edit Service</a>
+                                        <a class="dropdown-item waves-light waves-effect" href="#!"><i
+                                                class="icofont icofont-ui-delete"></i> Remove Service</a>
+                                    </div>
+                                    <!-- end of dropdown menu -->
+                                </div>
+                                <!-- end of seconadary -->
+                            </div>
+                            <!-- end of pull-right class -->
+                        </div>
+                        <!-- end of card-footer -->
+                    </div>
+                    <!-- Service list card end -->
+                </div>
             </div>
         </div>
     </div>
-</div>
+    {% endblock %}
+
+{% endblock %}
+
+{% block extra_js %}
+
+<script type="text/javascript" src="files\bower_components\slick-1.8.1\slick\slick.js"></script>
+
 {% endblock %}
