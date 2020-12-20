@@ -23,7 +23,9 @@ logging.getLogger().addFilter(lambda record: "/ " in record)
 
 @app.route("/")
 def home():
-    return render_template("pages/auth-normal-sign-in.htm")
+    return render_template("pages/marketplace.htm")
+    # return redirect("/marketplace.htm")
+    # return render_template("pages/auth-normal-sign-in.htm")
 
 @app.route("/404")
 def not_found():
@@ -32,7 +34,6 @@ def not_found():
 @app.route("/upload", methods=['GET', 'POST'])
 def fake_upload():
     return Response("Done", status=200)
-
 
 
 @app.route("/<template>")
